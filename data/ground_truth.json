@@ -1,0 +1,2084 @@
+[
+  {
+    "entity_a_id": "base_0",
+    "entity_b_id": "base_0_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_0",
+    "entity_b_id": "base_0_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_0",
+    "entity_b_id": "base_0_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_1",
+    "entity_b_id": "base_1_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_1",
+    "entity_b_id": "base_1_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_2",
+    "entity_b_id": "base_2_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_2",
+    "entity_b_id": "base_2_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_2",
+    "entity_b_id": "fp_2_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_2",
+    "entity_b_id": "fp_2_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_3",
+    "entity_b_id": "base_3_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_3",
+    "entity_b_id": "base_3_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_3",
+    "entity_b_id": "base_3_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_4",
+    "entity_b_id": "base_4_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_4",
+    "entity_b_id": "base_4_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_4",
+    "entity_b_id": "base_4_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_4",
+    "entity_b_id": "fp_4_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_5",
+    "entity_b_id": "base_5_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_5",
+    "entity_b_id": "base_5_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_5",
+    "entity_b_id": "fp_5_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_6",
+    "entity_b_id": "base_6_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_6",
+    "entity_b_id": "base_6_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_6",
+    "entity_b_id": "base_6_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_6",
+    "entity_b_id": "fp_6_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_7",
+    "entity_b_id": "base_7_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_7",
+    "entity_b_id": "base_7_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_8",
+    "entity_b_id": "base_8_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_8",
+    "entity_b_id": "base_8_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_8",
+    "entity_b_id": "base_8_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_8",
+    "entity_b_id": "fp_8_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_8",
+    "entity_b_id": "fp_8_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_9",
+    "entity_b_id": "base_9_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_9",
+    "entity_b_id": "base_9_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_9",
+    "entity_b_id": "base_9_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_10",
+    "entity_b_id": "base_10_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_10",
+    "entity_b_id": "base_10_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_10",
+    "entity_b_id": "base_10_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_10",
+    "entity_b_id": "fp_10_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_10",
+    "entity_b_id": "fp_10_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_11",
+    "entity_b_id": "base_11_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_11",
+    "entity_b_id": "base_11_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_12",
+    "entity_b_id": "base_12_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_12",
+    "entity_b_id": "base_12_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_12",
+    "entity_b_id": "base_12_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_13",
+    "entity_b_id": "base_13_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_13",
+    "entity_b_id": "base_13_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_14",
+    "entity_b_id": "base_14_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_14",
+    "entity_b_id": "base_14_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_14",
+    "entity_b_id": "fp_14_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_15",
+    "entity_b_id": "base_15_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_15",
+    "entity_b_id": "base_15_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_15",
+    "entity_b_id": "base_15_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_15",
+    "entity_b_id": "fp_15_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_16",
+    "entity_b_id": "base_16_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_16",
+    "entity_b_id": "base_16_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_16",
+    "entity_b_id": "base_16_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_16",
+    "entity_b_id": "fp_16_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_16",
+    "entity_b_id": "fp_16_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_17",
+    "entity_b_id": "base_17_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_17",
+    "entity_b_id": "base_17_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_17",
+    "entity_b_id": "fp_17_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_18",
+    "entity_b_id": "base_18_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_18",
+    "entity_b_id": "base_18_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_18",
+    "entity_b_id": "base_18_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_19",
+    "entity_b_id": "base_19_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_19",
+    "entity_b_id": "base_19_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_20",
+    "entity_b_id": "base_20_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_20",
+    "entity_b_id": "base_20_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_20",
+    "entity_b_id": "base_20_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_20",
+    "entity_b_id": "fp_20_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_21",
+    "entity_b_id": "base_21_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_21",
+    "entity_b_id": "base_21_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_21",
+    "entity_b_id": "base_21_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_22",
+    "entity_b_id": "base_22_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_22",
+    "entity_b_id": "base_22_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_22",
+    "entity_b_id": "base_22_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_23",
+    "entity_b_id": "base_23_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_23",
+    "entity_b_id": "base_23_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_23",
+    "entity_b_id": "fp_23_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_23",
+    "entity_b_id": "fp_23_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_24",
+    "entity_b_id": "base_24_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_24",
+    "entity_b_id": "base_24_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_24",
+    "entity_b_id": "fp_24_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_25",
+    "entity_b_id": "base_25_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_25",
+    "entity_b_id": "base_25_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_25",
+    "entity_b_id": "fp_25_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_26",
+    "entity_b_id": "base_26_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_26",
+    "entity_b_id": "base_26_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_27",
+    "entity_b_id": "base_27_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_27",
+    "entity_b_id": "base_27_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_28",
+    "entity_b_id": "base_28_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_28",
+    "entity_b_id": "base_28_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_29",
+    "entity_b_id": "base_29_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_29",
+    "entity_b_id": "base_29_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_30",
+    "entity_b_id": "base_30_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_30",
+    "entity_b_id": "base_30_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_30",
+    "entity_b_id": "base_30_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_30",
+    "entity_b_id": "fp_30_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_30",
+    "entity_b_id": "fp_30_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_31",
+    "entity_b_id": "base_31_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_31",
+    "entity_b_id": "base_31_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_31",
+    "entity_b_id": "fp_31_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_31",
+    "entity_b_id": "fp_31_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_32",
+    "entity_b_id": "base_32_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_32",
+    "entity_b_id": "base_32_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_32",
+    "entity_b_id": "base_32_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_32",
+    "entity_b_id": "fp_32_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_32",
+    "entity_b_id": "fp_32_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_33",
+    "entity_b_id": "base_33_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_33",
+    "entity_b_id": "base_33_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_33",
+    "entity_b_id": "fp_33_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_33",
+    "entity_b_id": "fp_33_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_34",
+    "entity_b_id": "base_34_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_34",
+    "entity_b_id": "base_34_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_34",
+    "entity_b_id": "base_34_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_34",
+    "entity_b_id": "fp_34_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_35",
+    "entity_b_id": "base_35_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_35",
+    "entity_b_id": "base_35_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_35",
+    "entity_b_id": "base_35_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_36",
+    "entity_b_id": "base_36_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_36",
+    "entity_b_id": "base_36_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_36",
+    "entity_b_id": "fp_36_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_37",
+    "entity_b_id": "base_37_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_37",
+    "entity_b_id": "base_37_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_37",
+    "entity_b_id": "base_37_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_37",
+    "entity_b_id": "fp_37_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_38",
+    "entity_b_id": "base_38_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_38",
+    "entity_b_id": "base_38_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_39",
+    "entity_b_id": "base_39_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_39",
+    "entity_b_id": "base_39_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_39",
+    "entity_b_id": "base_39_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_40",
+    "entity_b_id": "base_40_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_40",
+    "entity_b_id": "base_40_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_40",
+    "entity_b_id": "base_40_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_41",
+    "entity_b_id": "base_41_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_41",
+    "entity_b_id": "base_41_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_41",
+    "entity_b_id": "base_41_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_41",
+    "entity_b_id": "fp_41_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_41",
+    "entity_b_id": "fp_41_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_42",
+    "entity_b_id": "base_42_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_42",
+    "entity_b_id": "base_42_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_43",
+    "entity_b_id": "base_43_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_43",
+    "entity_b_id": "base_43_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_44",
+    "entity_b_id": "base_44_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_44",
+    "entity_b_id": "base_44_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_44",
+    "entity_b_id": "base_44_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_44",
+    "entity_b_id": "fp_44_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_44",
+    "entity_b_id": "fp_44_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_45",
+    "entity_b_id": "base_45_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_45",
+    "entity_b_id": "base_45_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_45",
+    "entity_b_id": "fp_45_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_45",
+    "entity_b_id": "fp_45_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_46",
+    "entity_b_id": "base_46_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_46",
+    "entity_b_id": "base_46_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_46",
+    "entity_b_id": "base_46_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_46",
+    "entity_b_id": "fp_46_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_47",
+    "entity_b_id": "base_47_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_47",
+    "entity_b_id": "base_47_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_47",
+    "entity_b_id": "base_47_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_48",
+    "entity_b_id": "base_48_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_48",
+    "entity_b_id": "base_48_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_48",
+    "entity_b_id": "base_48_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_48",
+    "entity_b_id": "fp_48_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_48",
+    "entity_b_id": "fp_48_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_49",
+    "entity_b_id": "base_49_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_49",
+    "entity_b_id": "base_49_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_49",
+    "entity_b_id": "base_49_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_50",
+    "entity_b_id": "base_50_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_50",
+    "entity_b_id": "base_50_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_50",
+    "entity_b_id": "base_50_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_50",
+    "entity_b_id": "fp_50_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_50",
+    "entity_b_id": "fp_50_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_51",
+    "entity_b_id": "base_51_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_51",
+    "entity_b_id": "base_51_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_51",
+    "entity_b_id": "base_51_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_51",
+    "entity_b_id": "fp_51_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_51",
+    "entity_b_id": "fp_51_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_52",
+    "entity_b_id": "base_52_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_52",
+    "entity_b_id": "base_52_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_52",
+    "entity_b_id": "base_52_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_52",
+    "entity_b_id": "fp_52_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_53",
+    "entity_b_id": "base_53_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_53",
+    "entity_b_id": "base_53_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_53",
+    "entity_b_id": "base_53_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_53",
+    "entity_b_id": "fp_53_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_54",
+    "entity_b_id": "base_54_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_54",
+    "entity_b_id": "base_54_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_54",
+    "entity_b_id": "fp_54_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_55",
+    "entity_b_id": "base_55_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_55",
+    "entity_b_id": "base_55_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_55",
+    "entity_b_id": "base_55_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_55",
+    "entity_b_id": "fp_55_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_55",
+    "entity_b_id": "fp_55_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_56",
+    "entity_b_id": "base_56_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_56",
+    "entity_b_id": "base_56_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_57",
+    "entity_b_id": "base_57_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_57",
+    "entity_b_id": "base_57_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_57",
+    "entity_b_id": "base_57_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_58",
+    "entity_b_id": "base_58_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_58",
+    "entity_b_id": "base_58_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_58",
+    "entity_b_id": "fp_58_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_58",
+    "entity_b_id": "fp_58_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_59",
+    "entity_b_id": "base_59_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_59",
+    "entity_b_id": "base_59_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_59",
+    "entity_b_id": "fp_59_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_59",
+    "entity_b_id": "fp_59_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_60",
+    "entity_b_id": "base_60_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_60",
+    "entity_b_id": "base_60_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_61",
+    "entity_b_id": "base_61_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_61",
+    "entity_b_id": "base_61_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_61",
+    "entity_b_id": "fp_61_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_61",
+    "entity_b_id": "fp_61_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_62",
+    "entity_b_id": "base_62_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_62",
+    "entity_b_id": "base_62_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_63",
+    "entity_b_id": "base_63_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_63",
+    "entity_b_id": "base_63_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_63",
+    "entity_b_id": "base_63_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_63",
+    "entity_b_id": "fp_63_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_64",
+    "entity_b_id": "base_64_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_64",
+    "entity_b_id": "base_64_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_64",
+    "entity_b_id": "base_64_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_65",
+    "entity_b_id": "base_65_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_65",
+    "entity_b_id": "base_65_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_65",
+    "entity_b_id": "fp_65_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_66",
+    "entity_b_id": "base_66_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_66",
+    "entity_b_id": "base_66_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_66",
+    "entity_b_id": "base_66_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_66",
+    "entity_b_id": "fp_66_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_67",
+    "entity_b_id": "base_67_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_67",
+    "entity_b_id": "base_67_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_67",
+    "entity_b_id": "fp_67_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_68",
+    "entity_b_id": "base_68_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_68",
+    "entity_b_id": "base_68_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_68",
+    "entity_b_id": "fp_68_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_69",
+    "entity_b_id": "base_69_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_69",
+    "entity_b_id": "base_69_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_69",
+    "entity_b_id": "base_69_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_70",
+    "entity_b_id": "base_70_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_70",
+    "entity_b_id": "base_70_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_70",
+    "entity_b_id": "fp_70_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_71",
+    "entity_b_id": "base_71_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_71",
+    "entity_b_id": "base_71_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_71",
+    "entity_b_id": "base_71_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_71",
+    "entity_b_id": "fp_71_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_72",
+    "entity_b_id": "base_72_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_72",
+    "entity_b_id": "base_72_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_72",
+    "entity_b_id": "base_72_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_73",
+    "entity_b_id": "base_73_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_73",
+    "entity_b_id": "base_73_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_73",
+    "entity_b_id": "base_73_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_74",
+    "entity_b_id": "base_74_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_74",
+    "entity_b_id": "base_74_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_74",
+    "entity_b_id": "fp_74_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_75",
+    "entity_b_id": "base_75_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_75",
+    "entity_b_id": "base_75_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_76",
+    "entity_b_id": "base_76_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_76",
+    "entity_b_id": "base_76_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_76",
+    "entity_b_id": "base_76_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_76",
+    "entity_b_id": "fp_76_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_76",
+    "entity_b_id": "fp_76_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_77",
+    "entity_b_id": "base_77_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_77",
+    "entity_b_id": "base_77_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_77",
+    "entity_b_id": "base_77_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_77",
+    "entity_b_id": "fp_77_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_78",
+    "entity_b_id": "base_78_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_78",
+    "entity_b_id": "base_78_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_78",
+    "entity_b_id": "base_78_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_78",
+    "entity_b_id": "fp_78_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_79",
+    "entity_b_id": "base_79_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_79",
+    "entity_b_id": "base_79_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_79",
+    "entity_b_id": "fp_79_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_79",
+    "entity_b_id": "fp_79_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_80",
+    "entity_b_id": "base_80_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_80",
+    "entity_b_id": "base_80_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_80",
+    "entity_b_id": "base_80_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_80",
+    "entity_b_id": "fp_80_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_81",
+    "entity_b_id": "base_81_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_81",
+    "entity_b_id": "base_81_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_81",
+    "entity_b_id": "fp_81_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_82",
+    "entity_b_id": "base_82_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_82",
+    "entity_b_id": "base_82_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_82",
+    "entity_b_id": "base_82_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_82",
+    "entity_b_id": "fp_82_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_83",
+    "entity_b_id": "base_83_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_83",
+    "entity_b_id": "base_83_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_83",
+    "entity_b_id": "fp_83_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_83",
+    "entity_b_id": "fp_83_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_84",
+    "entity_b_id": "base_84_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_84",
+    "entity_b_id": "base_84_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_84",
+    "entity_b_id": "fp_84_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_85",
+    "entity_b_id": "base_85_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_85",
+    "entity_b_id": "base_85_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_85",
+    "entity_b_id": "base_85_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_85",
+    "entity_b_id": "fp_85_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_85",
+    "entity_b_id": "fp_85_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_86",
+    "entity_b_id": "base_86_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_86",
+    "entity_b_id": "base_86_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_86",
+    "entity_b_id": "base_86_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_86",
+    "entity_b_id": "fp_86_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_86",
+    "entity_b_id": "fp_86_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_87",
+    "entity_b_id": "base_87_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_87",
+    "entity_b_id": "base_87_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_87",
+    "entity_b_id": "fp_87_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_87",
+    "entity_b_id": "fp_87_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_88",
+    "entity_b_id": "base_88_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_88",
+    "entity_b_id": "base_88_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_88",
+    "entity_b_id": "base_88_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_89",
+    "entity_b_id": "base_89_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_89",
+    "entity_b_id": "base_89_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_89",
+    "entity_b_id": "base_89_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_89",
+    "entity_b_id": "fp_89_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_89",
+    "entity_b_id": "fp_89_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_90",
+    "entity_b_id": "base_90_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_90",
+    "entity_b_id": "base_90_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_90",
+    "entity_b_id": "fp_90_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_91",
+    "entity_b_id": "base_91_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_91",
+    "entity_b_id": "base_91_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_91",
+    "entity_b_id": "base_91_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_92",
+    "entity_b_id": "base_92_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_92",
+    "entity_b_id": "base_92_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_93",
+    "entity_b_id": "base_93_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_93",
+    "entity_b_id": "base_93_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_93",
+    "entity_b_id": "fp_93_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_94",
+    "entity_b_id": "base_94_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_94",
+    "entity_b_id": "base_94_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_94",
+    "entity_b_id": "base_94_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_94",
+    "entity_b_id": "fp_94_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_94",
+    "entity_b_id": "fp_94_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_95",
+    "entity_b_id": "base_95_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_95",
+    "entity_b_id": "base_95_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_95",
+    "entity_b_id": "fp_95_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_96",
+    "entity_b_id": "base_96_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_96",
+    "entity_b_id": "base_96_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_96",
+    "entity_b_id": "base_96_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_96",
+    "entity_b_id": "fp_96_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_96",
+    "entity_b_id": "fp_96_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_97",
+    "entity_b_id": "base_97_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_97",
+    "entity_b_id": "base_97_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_97",
+    "entity_b_id": "fp_97_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_97",
+    "entity_b_id": "fp_97_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_98",
+    "entity_b_id": "base_98_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_98",
+    "entity_b_id": "base_98_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_98",
+    "entity_b_id": "base_98_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_98",
+    "entity_b_id": "fp_98_0",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_98",
+    "entity_b_id": "fp_98_1",
+    "is_match": false,
+    "match_type": "different_person"
+  },
+  {
+    "entity_a_id": "base_99",
+    "entity_b_id": "base_99_v1",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_99",
+    "entity_b_id": "base_99_v2",
+    "is_match": true,
+    "match_type": "same_person"
+  },
+  {
+    "entity_a_id": "base_99",
+    "entity_b_id": "base_99_v3",
+    "is_match": true,
+    "match_type": "same_person"
+  }
+]
