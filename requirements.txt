@@ -1,0 +1,5 @@
+openai==1.12.0
+python-dotenv==1.0.0
+pandas==2.1.4
+faker==22.0.0
+jupyter==1.0.0
