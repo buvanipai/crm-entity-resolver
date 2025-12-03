@@ -1,0 +1,262 @@
+"""
+Entity Resolution using LLM-based reasoning.
+
+This module implements few-shot learning for contact deduplication,
+using OpenAI's GPT models to make nuanced matching decisions that
+rule-based systems struggle with.
+"""
+
+import os
+from typing import Dict, List, Optional
+from openai import OpenAI
+from dotenv import load_dotenv
+import json
+from dataclasses import dataclass
+
+load_dotenv()
+
+
+@dataclass
+class MatchDecision:
+    """
+    Structured output from entity matching decision.
+    
+    Attributes:
+        should_merge (bool): Whether the entities should be merged.
+        confidence (float): Confidence level of the decision (0-1).
+        reasoning (str): Explanation of the decision.
+        evidence_for (List[str]): Evidence supporting the merge.
+        evidence_against (List[str]): Evidence against the merge.
+    """
+        
+    should_merge: bool
+    confidence: float
+    reasoning: str
+    evidence_for: List[str]
+    evidence_against: List[str]
+    
+    def to_dict(self) -> Dict:
+        return {
+            "should_merge": self.should_merge,
+            "confidence": self.confidence,
+            "reasoning": self.reasoning,
+            "evidence_for": self.evidence_for,
+            "evidence_against": self.evidence_against,
+        }
+        
+class EntityResolver:
+    """
+    LLM-based entity resolution with OpenAI client.
+    """
+    
+    def __init__(self, model: str = "gpt-4"):
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            raise ValueError("OPENAI_API_KEY environment variable not set.")
+        
+        self.client = OpenAI(api_key=api_key)
+        self.model = model
+        self.few_shot_examples = self._create_few_shot_examples()
+        
+    def _create_few_shot_examples(self) -> List[Dict]:
+        """
+        Create few-shot examples for the prompt.
+        """
+        return [
+             {
+                "entity_a": {
+                    "full_name": "Sarah Chen",
+                    "email": "sarah.chen@acme.com",
+                    "company": "Acme Corp"
+                },
+                "entity_b": {
+                    "full_name": "S. Chen",
+                    "title": "VP Engineering",
+                    "company": "Acme Corp"
+                },
+                "decision": {
+                    "should_merge": True,
+                    "confidence": 0.9,
+                    "reasoning": "Same last name (Chen), same company (Acme Corp). 'S.' is standard abbreviation for Sarah. Email domain matches company.",
+                    "evidence_for": ["Same last name", "Same company", "Name abbreviation pattern"],
+                    "evidence_against": ["Missing email in entity_b"]
+                }
+            },
+            {
+                "entity_a": {
+                    "full_name": "Michael Johnson",
+                    "email": "mjohnson@techcorp.com",
+                    "company": "TechCorp"
+                },
+                "entity_b": {
+                    "full_name": "Michael Johnson",
+                    "email": "mike.j@designco.com",
+                    "title": "Designer",
+                    "company": "DesignCo"
+                },
+                "decision": {
+                    "should_merge": False,
+                    "confidence": 0.85,
+                    "reasoning": "Same name but different companies and completely different email domains. Michael Johnson is a common name. No other matching identifiers.",
+                    "evidence_for": ["Same full name"],
+                    "evidence_against": ["Different companies", "Different email domains", "Common name (high collision risk)"]
+                }
+            },
+            {
+                "entity_a": {
+                    "full_name": "Robert Smith",
+                    "phone": "+1-555-0123",
+                    "company": "DataCo"
+                },
+                "entity_b": {
+                    "full_name": "Bob Smith",
+                    "email": "bob.smith@dataco.com",
+                    "company": "DataCo"
+                },
+                "decision": {
+                    "should_merge": True,
+                    "confidence": 0.95,
+                    "reasoning": "Bob is standard nickname for Robert. Same last name, same company. Email follows naming pattern (bob.smith matches Bob Smith).",
+                    "evidence_for": ["Nickname match (Bob=Robert)", "Same last name", "Same company", "Email matches name pattern"],
+                    "evidence_against": []
+                }
+            }
+        ]
+        
+    def should_merge(self, entity_a: Dict, entity_b: Dict) -> MatchDecision:
+        """
+        Determine if two entities should be merged.
+        """
+        promtpt = self._build_prompt(entity_a, entity_b)
+        
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[{"role": "user", "content": promtpt}],
+                temperature=0.1,
+            )
+            
+            content = json.loads(response.choices[0].message.content)
+            
+            if isinstance(content, dict):
+                result = content
+            else:
+                # Remove markdown code blocks if present
+                if "```json" in content:
+                    content = content.split("```json")[1].split("```")[0]
+                elif "```" in content:
+                    content = content.split("```")[1].split("```")[0]
+                
+                result = json.loads(content.strip())
+            
+            return MatchDecision(
+                should_merge=result["should_merge"],
+                confidence=result["confidence"],
+                reasoning=result["reasoning"],
+                evidence_for=result.get("evidence_for", []),
+                evidence_against=result.get("evidence_against",[])
+            )
+            
+        except Exception as e:
+            
+            return MatchDecision(
+                should_merge=False,
+                confidence=0.0,
+                reasoning=f"Error during LLM processing: {str(e)}",
+                evidence_for=[],
+                evidence_against=["API call failed"]
+            )
+            
+    def _build_prompt(self, entity_a: Dict, entity_b: Dict) -> str:
+        """
+        Constructs the few-shot prompt for entity matching.
+        """
+        
+        example_text = ""
+        
+        for i, example in enumerate(self.few_shot_examples):
+            example_text += f"Example {i+1}:\n"
+            example_text += f"Entity A: {json.dumps(example['entity_a'], indent=2)}\n"
+            example_text += f"Entity B: {json.dumps(example['entity_b'], indent=2)}\n"
+            example_text += f"Decision: {json.dumps(example['decision'], indent=2)}\n"
+            
+        prompt = f"""
+        
+        You are an expert at entity resolution for CRM systems. Your task is to determine if two contact records represent the same person.
+        
+        Consider these signals:
+        - Name matching (including nicknames, initials, abbreviations)
+        - Email addresses (domain, username patterns)
+        - Company names
+        - Phone numbers
+        - Job titles and locations
+        - Common name collision risk (e.g., "John Smith" is high risk)
+
+        Here are examples of how to reason through matches:
+        {example_text}
+
+        Now analyze these two entities:
+
+        Entity A:
+        {json.dumps(entity_a, indent=2)}
+
+        Entity B:
+        {json.dumps(entity_b, indent=2)}
+
+        Provide your analysis in this exact JSON format:
+        {{
+            "should_merge": true or false,
+            "confidence": 0.0 to 1.0,
+            "reasoning": "step-by-step explanation",
+            "evidence_for": ["list", "of", "supporting", "signals"],
+            "evidence_against": ["list", "of", "contradicting", "signals"]
+        }}
+
+        Think step-by-step and be precise about confidence scoring.
+        
+        """
+        
+        return prompt
+    
+if __name__ == "__main__":
+    resolver = EntityResolver()
+    
+    # Test Case 1: Nickname variation
+    entity_a = {
+        "full_name": "Jennifer Martinex",
+        "email": "jennifer.martinez@dataco.com",
+        "company": "DataCo"
+    }
+    
+    entity_b = {
+        "full_name": "Jenny Martinez",
+        "phone": "+1-555-6789",
+        "company": "DataCo"
+    }
+    
+    print("Test Case 1: Nicname variation")
+    print("Entity A:", entity_a)
+    print("Entity B:", entity_b)
+    decision = resolver.should_merge(entity_a, entity_b)
+    print(f"Decision: {json.dumps(decision.to_dict(), indent=2)}\n")
+    print("-" * 50)
+    
+    # Test Case 2: False Positive
+    entity_c = {
+        "full_name": "John Smith",
+        "email": "john.smith@companyA.com",
+        "company": "Company A"
+    }
+    
+    entity_d = {
+        "full_name": "John Smith",
+        "email": "john.smith@companyB.com",
+        "company": "Company B"
+    }
+    
+    print("Test Case 2: False Positive")
+    print("Entity C:", entity_c)
+    print("Entity D:", entity_d)
+    decision = resolver.should_merge(entity_c, entity_d)
+    print(f"Decision: {json.dumps(decision.to_dict(), indent=2)}\n")
+    print("-" * 50)
