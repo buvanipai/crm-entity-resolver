@@ -8,7 +8,8 @@ rule-based systems struggle with.
 
 import os
 from typing import Dict, List, Optional
-from openai import OpenAI
+import google.generativeai as genai
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from dotenv import load_dotenv
 import json
 from dataclasses import dataclass
@@ -49,13 +50,19 @@ class EntityResolver:
     LLM-based entity resolution with OpenAI client.
     """
     
-    def __init__(self, model: str = "gpt-4"):
-        api_key = os.getenv("OPENAI_API_KEY")
+    def __init__(self, model: str = "gemini-2.0-flash-lite"):
+        api_key = os.getenv("GEMINI_API_KEY")
         if not api_key:
-            raise ValueError("OPENAI_API_KEY environment variable not set.")
+            raise ValueError("GEMINI_API_KEY environment variable not set.")
         
-        self.client = OpenAI(api_key=api_key)
-        self.model = model
+        genai.configure(api_key=api_key)
+        self.model = genai.GenerativeModel(
+            model,
+            safety_settings={
+                HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+                HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+            }
+        )
         self.few_shot_examples = self._create_few_shot_examples()
         
     def _create_few_shot_examples(self) -> List[Dict]:
@@ -127,27 +134,22 @@ class EntityResolver:
         """
         Determine if two entities should be merged.
         """
-        promtpt = self._build_prompt(entity_a, entity_b)
+        prompt = self._build_prompt(entity_a, entity_b)
         
         try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[{"role": "user", "content": promtpt}],
-                temperature=0.1,
+            response = self.model.generate_content(
+                prompt,
+                generation_config=genai.GenerationConfig(temperature=0.1)
             )
             
-            content = json.loads(response.choices[0].message.content)
-            
-            if isinstance(content, dict):
-                result = content
-            else:
-                # Remove markdown code blocks if present
-                if "```json" in content:
-                    content = content.split("```json")[1].split("```")[0]
-                elif "```" in content:
-                    content = content.split("```")[1].split("```")[0]
+            content = response.text
+                        
+            if "```json" in content:
+                content = content.split("```json")[1].split("```")[0]
+            elif "```" in content:
+                content = content.split("```")[1].split("```")[0]
                 
-                result = json.loads(content.strip())
+            result = json.loads(content.strip())
             
             return MatchDecision(
                 should_merge=result["should_merge"],
@@ -234,7 +236,7 @@ if __name__ == "__main__":
         "company": "DataCo"
     }
     
-    print("Test Case 1: Nicname variation")
+    print("Test Case 1: Nickname variation")
     print("Entity A:", entity_a)
     print("Entity B:", entity_b)
     decision = resolver.should_merge(entity_a, entity_b)
