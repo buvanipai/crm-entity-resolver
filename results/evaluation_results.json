@@ -1,12 +1,12 @@
 {
-  "precision": 0.9074,
-  "recall": 0.3858,
-  "f1_score": 0.5414,
-  "accuracy": 0.5216,
-  "true_positives": 98,
-  "true_negatives": 83,
-  "false_positives": 10,
-  "false_negatives": 156,
-  "total_predictions": 347,
-  "avg_confidence": 0.3669
+  "precision": 1.0,
+  "recall": 0.7308,
+  "f1_score": 0.8444,
+  "accuracy": 0.7879,
+  "true_positives": 19,
+  "true_negatives": 7,
+  "false_positives": 0,
+  "false_negatives": 7,
+  "total_predictions": 33,
+  "avg_confidence": 0.8948
 }

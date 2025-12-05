@@ -1,0 +1,23 @@
+Scanning 43 contacts for duplicates...
+Total comparisons needed: 99
+Comparison 1:
+Contact A: {'id': 'base_0', 'first_name': 'Danielle', 'last_name': 'Johnson', 'full_name': 'Danielle Johnson', 'email': 'danielle.johnson@sanchez-taylor.com', 'phone': '581-296-0013', 'company': 'Sanchez-Taylor', 'title': 'Surveyor, mining', 'linkedin': 'linkedin.com/in/daniellejohnson', 'location': 'Lake Debra, ND'}
+Contact B: {'id': 'base_0_v1', 'full_name': 'D. Johnson', 'title': 'Surveyor, mining', 'company': 'Sanchez-Taylor', 'source': 'calendar'}
+Should Merge: True, Confidence: 0.95
+Reasoning: Same last name (Johnson), same company (Sanchez-Taylor), same job title. 'D.' is a standard abbrevia
+
+Comparison 2:
+Contact A: {'id': 'base_0', 'first_name': 'Danielle', 'last_name': 'Johnson', 'full_name': 'Danielle Johnson', 'email': 'danielle.johnson@sanchez-taylor.com', 'phone': '581-296-0013', 'company': 'Sanchez-Taylor', 'title': 'Surveyor, mining', 'linkedin': 'linkedin.com/in/daniellejohnson', 'location': 'Lake Debra, ND'}
+Contact B: {'id': 'base_0_v2', 'full_name': 'Danielle Johhnson', 'email': 'danielle.johhnson@sanchez-taylor.com', 'company': 'Sanchez-Taylor', 'source': 'manual_entry'}
+Should Merge: True, Confidence: 0.98
+Reasoning: Same full name (Danielle Johnson), same company (Sanchez-Taylor). The email addresses are very simil
+
+Comparison 3:
+Contact A: {'id': 'base_0_v1', 'full_name': 'D. Johnson', 'title': 'Surveyor, mining', 'company': 'Sanchez-Taylor', 'source': 'calendar'}
+Contact B: {'id': 'base_0_v2', 'full_name': 'Danielle Johhnson', 'email': 'danielle.johhnson@sanchez-taylor.com', 'company': 'Sanchez-Taylor', 'source': 'manual_entry'}
+Should Merge: True, Confidence: 0.90
+Reasoning: Same company (Sanchez-Taylor), same title. 'D.' is a standard abbreviation for Danielle. The email a
+
+Progress: 50 comparisons done.
+Found 21 duplicate pairs.
+Deduplication complete. Results saved to results/ directory.

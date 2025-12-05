@@ -264,7 +264,7 @@ def generate_full_dataset(num_base_contacts=50):
 
 if __name__ == "__main__":
     print("Generating full dataset.")
-    records, ground_truth = generate_full_dataset(num_base_contacts=100)
+    records, ground_truth = generate_full_dataset(num_base_contacts=10)
     
     print(f"Generated {len(records)} total records")
     print(f"Generated {len(ground_truth)} ground truth labels")

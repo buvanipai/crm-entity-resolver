@@ -10,6 +10,9 @@ from typing import List, Dict, Tuple
 from entity_resolver import EntityResolver
 from merge_strategy import MergeStrategy
 from datetime import datetime
+import sys
+
+log_file = open("results/pipeline_log.txt", "w")
 
 
 class EntityResolutionPipeline:
@@ -30,18 +33,30 @@ class EntityResolutionPipeline:
         duplicates = []
         n = len(contacts)
         
-        print(f"Scanning {n} contacts for duplicates...")
-        print(f"Total comparisons needed: {n * (n - 1) // 2}")
+        print(f"Scanning {n} contacts for duplicates...", file=log_file)
         
         compared = 0
-        batch_size = 6
+        batch_size = 8
         pairs_to_compare = []
         pair_contacts = []
         
-        for i in range(n):
-            for j in range(i + 1, n):
-                pairs_to_compare.append((contacts[i], contacts[j]))
-                pair_contacts.append((i, j))
+        blocks = {}
+        
+        for i, contact in enumerate(contacts):
+            key = contact.get('company', 'unknown').lower()
+            blocks.setdefault(key, []).append((i, contact))
+            
+        pairs_to_compare = []
+        pair_contacts = []
+        for block in blocks.values():
+            for i in range(len(block)):
+                for j in range(i + 1, len(block)):
+                    idx_a, contact_a = block[i]
+                    idx_b, contact_b = block[j]
+                    pairs_to_compare.append((contact_a, contact_b))
+                    pair_contacts.append((idx_a, idx_b))
+
+        print(f"Total comparisons needed: {len(pairs_to_compare)}", file=log_file)
         
         for batch_start in range(0, len(pairs_to_compare), batch_size):
             batch_pairs = pairs_to_compare[batch_start:batch_start + batch_size]
@@ -56,19 +71,19 @@ class EntityResolutionPipeline:
                 compared += 1
                 
                 if compared % 50 == 0:
-                    print(f"Progress: {compared} comparisons done.")
+                    print(f"Progress: {compared} comparisons done.", file=log_file)
                     
                 if compared <= 3:
-                    print(f"Comparison {compared}:")
-                    print(f"Contact A: {contacts[i]}")
-                    print(f"Contact B: {contacts[j]}")
-                    print(f"Should Merge: {decision.should_merge}, Confidence: {decision.confidence:.2f}")
-                    print(f"Reasoning: {decision.reasoning[:100]}\n")
+                    print(f"Comparison {compared}:", file=log_file)
+                    print(f"Contact A: {contacts[i]}", file=log_file)
+                    print(f"Contact B: {contacts[j]}", file=log_file)
+                    print(f"Should Merge: {decision.should_merge}, Confidence: {decision.confidence:.2f}", file=log_file)
+                    print(f"Reasoning: {decision.reasoning[:100]}\n", file=log_file)
                 
                 if decision.should_merge and decision.confidence >= self.confidence_threshold:
                     duplicates.append((contacts[i], contacts[j], decision.confidence))
                     
-        print(f"Found {len(duplicates)} duplicate pairs.")
+        print(f"Found {len(duplicates)} duplicate pairs.", file=log_file)
         return duplicates
     
     def deduplicate(self, contacts: List[Dict]) -> Tuple[List[Dict], Dict]:
@@ -144,7 +159,7 @@ class EntityResolutionPipeline:
             
         return list(groups_dict.values())
     
-    
+
 if __name__ == "__main__":
     with open("data/contacts.json", "r") as f:
         contacts = json.load(f)
@@ -152,22 +167,23 @@ if __name__ == "__main__":
     with open("data/ground_truth.json", "r") as f:
         ground_truth = json.load(f)
         
-    contact_lookup = {c['id']: c for c in contacts}
+    # contact_lookup = {c['id']: c for c in contacts}
     
-    test_contacts = []
-    seen_ids = set()
-    for gt in ground_truth[:10]:
-        if gt['entity_a_id'] not in seen_ids:
-            test_contacts.append(contact_lookup[gt['entity_a_id']])
-            seen_ids.add(gt['entity_a_id'])
-        if gt['entity_b_id'] not in seen_ids:
-            test_contacts.append(contact_lookup[gt['entity_b_id']])
-            seen_ids.add(gt['entity_b_id'])
+    # test_contacts = []
+    # seen_ids = set()
+    # for gt in ground_truth[:10]:
+    #     if gt['entity_a_id'] not in seen_ids:
+    #         test_contacts.append(contact_lookup[gt['entity_a_id']])
+    #         seen_ids.add(gt['entity_a_id'])
+    #     if gt['entity_b_id'] not in seen_ids:
+    #         test_contacts.append(contact_lookup[gt['entity_b_id']])
+    #         seen_ids.add(gt['entity_b_id'])
         
-    print(f"Testing pipeline on {len(test_contacts)} contacts\n")
+    # print(f"Testing pipeline on {len(test_contacts)} contacts\n")
     
     pipeline = EntityResolutionPipeline(confidence_threshold=0.5)
-    deduplicated_contacts, stats = pipeline.deduplicate(test_contacts)
+    # deduplicated_contacts, stats = pipeline.deduplicate(test_contacts)
+    deduplicated_contacts, stats = pipeline.deduplicate(contacts)
     
     print("\n" + "=" * 40)
     print("DEDUPLICATION RESULTS")
@@ -182,4 +198,4 @@ if __name__ == "__main__":
     with open("results/deduplication_stats.json", "w") as f:
         json.dump(stats, f, indent=2)
         
-    print("Deduplication complete. Results saved to results/ directory.")
+    print("Deduplication complete. Results saved to results/ directory.", file=log_file)

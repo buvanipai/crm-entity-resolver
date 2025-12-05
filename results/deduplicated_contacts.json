@@ -114,22 +114,16 @@
         "email": "danielle.johhnson@sanchez-taylor.com",
         "company": "Sanchez-Taylor",
         "source": "manual_entry"
-      },
-      {
-        "id": "base_0_v3",
-        "full_name": "Danielle Johnson",
-        "phone": "581-296-0013",
-        "source": "phone_contact"
       }
     ],
-    "merge_timestamp": "2025-12-04T19:27:17.999614",
+    "merge_timestamp": "2025-12-05T00:40:04.361571",
     "conflicts": [
       {
         "field": "full_name",
         "values": [
-          "Danielle Johnson",
+          "D. Johnson",
           "Danielle Johhnson",
-          "D. Johnson"
+          "Danielle Johnson"
         ]
       },
       {
@@ -140,6 +134,212 @@
         ]
       }
     ]
+  },
+  {
+    "canonical_id": "base_3_v1",
+    "canonical_name": "Gabrielle Cameron",
+    "all_names": [
+      {
+        "value": "Gabrielle Cameron",
+        "field": "full_name",
+        "source": "personal_contact",
+        "record_id": "base_3_v1"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "gabrielle44@gmail.com",
+        "field": "email",
+        "source": "personal_contact",
+        "record_id": "base_3_v1"
+      }
+    ],
+    "all_phones": [],
+    "all_companies": [],
+    "all_titles": [
+      {
+        "value": "Television/film/video producer",
+        "field": "title",
+        "source": "business_card",
+        "record_id": "base_3_v3"
+      }
+    ],
+    "other_fields": {
+      "location": [
+        {
+          "value": "Hurstfurt, MN",
+          "source": "business_card",
+          "record_id": "base_3_v3"
+        }
+      ]
+    },
+    "source_records": [
+      {
+        "id": "base_3_v1",
+        "full_name": "Gabrielle Cameron",
+        "email": "gabrielle44@gmail.com",
+        "source": "personal_contact"
+      },
+      {
+        "id": "base_3_v3",
+        "full_name": "Gabrielle Cameron",
+        "title": "Television/film/video producer",
+        "location": "Hurstfurt, MN",
+        "source": "business_card"
+      }
+    ],
+    "merge_timestamp": "2025-12-05T00:40:04.362005",
+    "conflicts": []
+  },
+  {
+    "canonical_id": "base_4_v1",
+    "canonical_name": "Jeffrey Bright",
+    "all_names": [
+      {
+        "value": "Jeffrey Bright",
+        "field": "full_name",
+        "source": "personal_contact",
+        "record_id": "base_4_v1"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "jeffrey46@gmail.com",
+        "field": "email",
+        "source": "personal_contact",
+        "record_id": "base_4_v1"
+      }
+    ],
+    "all_phones": [],
+    "all_companies": [],
+    "all_titles": [
+      {
+        "value": "Colour technologist",
+        "field": "title",
+        "source": "business_card",
+        "record_id": "base_4_v3"
+      }
+    ],
+    "other_fields": {
+      "location": [
+        {
+          "value": "Kaylamouth, DE",
+          "source": "business_card",
+          "record_id": "base_4_v3"
+        }
+      ]
+    },
+    "source_records": [
+      {
+        "id": "base_4_v1",
+        "full_name": "Jeffrey Bright",
+        "email": "jeffrey46@gmail.com",
+        "source": "personal_contact"
+      },
+      {
+        "id": "base_4_v3",
+        "full_name": "Jeffrey Bright",
+        "title": "Colour technologist",
+        "location": "Kaylamouth, DE",
+        "source": "business_card"
+      }
+    ],
+    "merge_timestamp": "2025-12-05T00:40:04.362086",
+    "conflicts": []
+  },
+  {
+    "canonical_id": "base_7_v1",
+    "canonical_name": "Amber Cummings",
+    "all_names": [
+      {
+        "value": "Amber Cummings",
+        "field": "full_name",
+        "source": "phone_contact",
+        "record_id": "base_7_v1"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "amber82@gmail.com",
+        "field": "email",
+        "source": "personal_contact",
+        "record_id": "base_7_v3"
+      }
+    ],
+    "all_phones": [
+      {
+        "value": "(331)516-5667x01065",
+        "field": "phone",
+        "source": "phone_contact",
+        "record_id": "base_7_v1"
+      }
+    ],
+    "all_companies": [],
+    "all_titles": [],
+    "other_fields": {},
+    "source_records": [
+      {
+        "id": "base_7_v1",
+        "full_name": "Amber Cummings",
+        "phone": "(331)516-5667x01065",
+        "source": "phone_contact"
+      },
+      {
+        "id": "base_7_v3",
+        "full_name": "Amber Cummings",
+        "email": "amber82@gmail.com",
+        "source": "personal_contact"
+      }
+    ],
+    "merge_timestamp": "2025-12-05T00:40:04.362161",
+    "conflicts": []
+  },
+  {
+    "canonical_id": "base_9_v2",
+    "canonical_name": "Melissa Jones",
+    "all_names": [
+      {
+        "value": "Melissa Jones",
+        "field": "full_name",
+        "source": "personal_contact",
+        "record_id": "base_9_v2"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "melissa99@gmail.com",
+        "field": "email",
+        "source": "personal_contact",
+        "record_id": "base_9_v2"
+      }
+    ],
+    "all_phones": [
+      {
+        "value": "(719)639-9091x6998",
+        "field": "phone",
+        "source": "phone_contact",
+        "record_id": "base_9_v3"
+      }
+    ],
+    "all_companies": [],
+    "all_titles": [],
+    "other_fields": {},
+    "source_records": [
+      {
+        "id": "base_9_v2",
+        "full_name": "Melissa Jones",
+        "email": "melissa99@gmail.com",
+        "source": "personal_contact"
+      },
+      {
+        "id": "base_9_v3",
+        "full_name": "Melissa Jones",
+        "phone": "(719)639-9091x6998",
+        "source": "phone_contact"
+      }
+    ],
+    "merge_timestamp": "2025-12-05T00:40:04.362219",
+    "conflicts": []
   },
   {
     "canonical_id": "base_1",
@@ -258,7 +458,7 @@
         "source": "calendar"
       }
     ],
-    "merge_timestamp": "2025-12-04T19:27:18.000214",
+    "merge_timestamp": "2025-12-05T00:40:04.362280",
     "conflicts": [
       {
         "field": "full_name",
@@ -271,8 +471,8 @@
       {
         "field": "email",
         "values": [
-          "robert.coole@pacheco-smith.com",
-          "robert.cole@pacheco-smith.com"
+          "robert.cole@pacheco-smith.com",
+          "robert.coole@pacheco-smith.com"
         ]
       }
     ]
@@ -304,12 +504,6 @@
         "field": "full_name",
         "source": "manual_entry",
         "record_id": "base_2_v2"
-      },
-      {
-        "value": "Stephe Martinez",
-        "field": "full_name",
-        "source": "different_person",
-        "record_id": "fp_2_0"
       }
     ],
     "all_emails": [
@@ -320,22 +514,10 @@
         "record_id": "base_2"
       },
       {
-        "value": "stephen92@gmail.com",
-        "field": "email",
-        "source": "personal_contact",
-        "record_id": "base_2_v1"
-      },
-      {
         "value": "stephen.martineez@miller-carter.com",
         "field": "email",
         "source": "manual_entry",
         "record_id": "base_2_v2"
-      },
-      {
-        "value": "stephe.martinez@miller-carter.com",
-        "field": "email",
-        "source": "different_person",
-        "record_id": "fp_2_0"
       }
     ],
     "all_phones": [
@@ -360,12 +542,6 @@
         "field": "title",
         "source": "unknown",
         "record_id": "base_2"
-      },
-      {
-        "value": "Geologist, engineering",
-        "field": "title",
-        "source": "different_person",
-        "record_id": "fp_2_0"
       }
     ],
     "other_fields": {
@@ -398,54 +574,740 @@
         "location": "West Michael, TN"
       },
       {
-        "id": "base_2_v1",
-        "full_name": "Stephen Martinez",
-        "email": "stephen92@gmail.com",
-        "source": "personal_contact"
-      },
-      {
         "id": "base_2_v2",
         "full_name": "Stephen Martineez",
         "email": "stephen.martineez@miller-carter.com",
         "company": "Miller-Carter",
         "source": "manual_entry"
-      },
-      {
-        "id": "fp_2_0",
-        "full_name": "Stephe Martinez",
-        "email": "stephe.martinez@miller-carter.com",
-        "company": "Miller-Carter",
-        "title": "Geologist, engineering",
-        "source": "different_person"
       }
     ],
-    "merge_timestamp": "2025-12-04T19:27:18.000527",
+    "merge_timestamp": "2025-12-05T00:40:04.362420",
     "conflicts": [
       {
         "field": "full_name",
         "values": [
-          "Stephen Martinez",
-          "Stephe Martinez",
-          "Stephen Martineez"
+          "Stephen Martineez",
+          "Stephen Martinez"
         ]
       },
       {
         "field": "email",
         "values": [
           "stephen.martinez@miller-carter.com",
-          "stephen.martineez@miller-carter.com",
-          "stephe.martinez@miller-carter.com",
-          "stephen92@gmail.com"
-        ]
-      },
-      {
-        "field": "title",
-        "values": [
-          "Medical sales representative",
-          "Geologist, engineering"
+          "stephen.martineez@miller-carter.com"
         ]
       }
     ]
+  },
+  {
+    "canonical_id": "base_3",
+    "canonical_name": "Gabrielle Cameron",
+    "all_names": [
+      {
+        "value": "Gabrielle Cameron",
+        "field": "full_name",
+        "source": "unknown",
+        "record_id": "base_3"
+      },
+      {
+        "value": "Gabrielle",
+        "field": "first_name",
+        "source": "unknown",
+        "record_id": "base_3"
+      },
+      {
+        "value": "Cameron",
+        "field": "last_name",
+        "source": "unknown",
+        "record_id": "base_3"
+      },
+      {
+        "value": "G. Cameron",
+        "field": "full_name",
+        "source": "calendar",
+        "record_id": "base_3_v2"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "gabrielle.cameron@perezinc.com",
+        "field": "email",
+        "source": "unknown",
+        "record_id": "base_3"
+      }
+    ],
+    "all_phones": [
+      {
+        "value": "564-613-9537x67242",
+        "field": "phone",
+        "source": "unknown",
+        "record_id": "base_3"
+      }
+    ],
+    "all_companies": [
+      {
+        "value": "Perez Inc",
+        "field": "company",
+        "source": "unknown",
+        "record_id": "base_3"
+      }
+    ],
+    "all_titles": [
+      {
+        "value": "Television/film/video producer",
+        "field": "title",
+        "source": "unknown",
+        "record_id": "base_3"
+      }
+    ],
+    "other_fields": {
+      "linkedin": [
+        {
+          "value": "linkedin.com/in/gabriellecameron",
+          "source": "unknown",
+          "record_id": "base_3"
+        }
+      ],
+      "location": [
+        {
+          "value": "Hurstfurt, MN",
+          "source": "unknown",
+          "record_id": "base_3"
+        }
+      ]
+    },
+    "source_records": [
+      {
+        "id": "base_3",
+        "first_name": "Gabrielle",
+        "last_name": "Cameron",
+        "full_name": "Gabrielle Cameron",
+        "email": "gabrielle.cameron@perezinc.com",
+        "phone": "564-613-9537x67242",
+        "company": "Perez Inc",
+        "title": "Television/film/video producer",
+        "linkedin": "linkedin.com/in/gabriellecameron",
+        "location": "Hurstfurt, MN"
+      },
+      {
+        "id": "base_3_v2",
+        "full_name": "G. Cameron",
+        "title": "Television/film/video producer",
+        "company": "Perez Inc",
+        "source": "calendar"
+      }
+    ],
+    "merge_timestamp": "2025-12-05T00:40:04.362538",
+    "conflicts": [
+      {
+        "field": "full_name",
+        "values": [
+          "G. Cameron",
+          "Gabrielle Cameron"
+        ]
+      }
+    ]
+  },
+  {
+    "canonical_id": "base_4",
+    "canonical_name": "Jeffrey Bright",
+    "all_names": [
+      {
+        "value": "Jeffrey Bright",
+        "field": "full_name",
+        "source": "unknown",
+        "record_id": "base_4"
+      },
+      {
+        "value": "Jeffrey",
+        "field": "first_name",
+        "source": "unknown",
+        "record_id": "base_4"
+      },
+      {
+        "value": "Bright",
+        "field": "last_name",
+        "source": "unknown",
+        "record_id": "base_4"
+      },
+      {
+        "value": "Jeffrey Brigght",
+        "field": "full_name",
+        "source": "manual_entry",
+        "record_id": "base_4_v2"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "jeffrey.bright@snydercamposandcallahan.com",
+        "field": "email",
+        "source": "unknown",
+        "record_id": "base_4"
+      },
+      {
+        "value": "jeffrey.brigght@snydercamposandcallahan.com",
+        "field": "email",
+        "source": "manual_entry",
+        "record_id": "base_4_v2"
+      }
+    ],
+    "all_phones": [
+      {
+        "value": "(626)291-6697",
+        "field": "phone",
+        "source": "unknown",
+        "record_id": "base_4"
+      }
+    ],
+    "all_companies": [
+      {
+        "value": "Snyder, Campos and Callahan",
+        "field": "company",
+        "source": "unknown",
+        "record_id": "base_4"
+      }
+    ],
+    "all_titles": [
+      {
+        "value": "Colour technologist",
+        "field": "title",
+        "source": "unknown",
+        "record_id": "base_4"
+      }
+    ],
+    "other_fields": {
+      "linkedin": [
+        {
+          "value": "linkedin.com/in/jeffreybright",
+          "source": "unknown",
+          "record_id": "base_4"
+        }
+      ],
+      "location": [
+        {
+          "value": "Kaylamouth, DE",
+          "source": "unknown",
+          "record_id": "base_4"
+        }
+      ]
+    },
+    "source_records": [
+      {
+        "id": "base_4",
+        "first_name": "Jeffrey",
+        "last_name": "Bright",
+        "full_name": "Jeffrey Bright",
+        "email": "jeffrey.bright@snydercamposandcallahan.com",
+        "phone": "(626)291-6697",
+        "company": "Snyder, Campos and Callahan",
+        "title": "Colour technologist",
+        "linkedin": "linkedin.com/in/jeffreybright",
+        "location": "Kaylamouth, DE"
+      },
+      {
+        "id": "base_4_v2",
+        "full_name": "Jeffrey Brigght",
+        "email": "jeffrey.brigght@snydercamposandcallahan.com",
+        "company": "Snyder, Campos and Callahan",
+        "source": "manual_entry"
+      }
+    ],
+    "merge_timestamp": "2025-12-05T00:40:04.362658",
+    "conflicts": [
+      {
+        "field": "full_name",
+        "values": [
+          "Jeffrey Brigght",
+          "Jeffrey Bright"
+        ]
+      },
+      {
+        "field": "email",
+        "values": [
+          "jeffrey.bright@snydercamposandcallahan.com",
+          "jeffrey.brigght@snydercamposandcallahan.com"
+        ]
+      }
+    ]
+  },
+  {
+    "canonical_id": "base_5",
+    "canonical_name": "James Brooks",
+    "all_names": [
+      {
+        "value": "James Brooks",
+        "field": "full_name",
+        "source": "unknown",
+        "record_id": "base_5"
+      },
+      {
+        "value": "James",
+        "field": "first_name",
+        "source": "unknown",
+        "record_id": "base_5"
+      },
+      {
+        "value": "Brooks",
+        "field": "last_name",
+        "source": "unknown",
+        "record_id": "base_5"
+      },
+      {
+        "value": "J. Brooks",
+        "field": "full_name",
+        "source": "calendar",
+        "record_id": "base_5_v3"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "james.brooks@ryanplc.com",
+        "field": "email",
+        "source": "unknown",
+        "record_id": "base_5"
+      }
+    ],
+    "all_phones": [
+      {
+        "value": "2955701543",
+        "field": "phone",
+        "source": "unknown",
+        "record_id": "base_5"
+      }
+    ],
+    "all_companies": [
+      {
+        "value": "Ryan PLC",
+        "field": "company",
+        "source": "unknown",
+        "record_id": "base_5"
+      }
+    ],
+    "all_titles": [
+      {
+        "value": "Tax adviser",
+        "field": "title",
+        "source": "unknown",
+        "record_id": "base_5"
+      }
+    ],
+    "other_fields": {
+      "linkedin": [
+        {
+          "value": "linkedin.com/in/jamesbrooks",
+          "source": "unknown",
+          "record_id": "base_5"
+        }
+      ],
+      "location": [
+        {
+          "value": "North Jessicaland, WV",
+          "source": "unknown",
+          "record_id": "base_5"
+        }
+      ]
+    },
+    "source_records": [
+      {
+        "id": "base_5",
+        "first_name": "James",
+        "last_name": "Brooks",
+        "full_name": "James Brooks",
+        "email": "james.brooks@ryanplc.com",
+        "phone": "2955701543",
+        "company": "Ryan PLC",
+        "title": "Tax adviser",
+        "linkedin": "linkedin.com/in/jamesbrooks",
+        "location": "North Jessicaland, WV"
+      },
+      {
+        "id": "base_5_v3",
+        "full_name": "J. Brooks",
+        "title": "Tax adviser",
+        "company": "Ryan PLC",
+        "source": "calendar"
+      }
+    ],
+    "merge_timestamp": "2025-12-05T00:40:04.362780",
+    "conflicts": [
+      {
+        "field": "full_name",
+        "values": [
+          "J. Brooks",
+          "James Brooks"
+        ]
+      }
+    ]
+  },
+  {
+    "canonical_id": "base_6",
+    "canonical_name": "Stacey Martin",
+    "all_names": [
+      {
+        "value": "Stacey Martin",
+        "field": "full_name",
+        "source": "unknown",
+        "record_id": "base_6"
+      },
+      {
+        "value": "Stacey",
+        "field": "first_name",
+        "source": "unknown",
+        "record_id": "base_6"
+      },
+      {
+        "value": "Martin",
+        "field": "last_name",
+        "source": "unknown",
+        "record_id": "base_6"
+      },
+      {
+        "value": "Stacey Maartin",
+        "field": "full_name",
+        "source": "manual_entry",
+        "record_id": "base_6_v1"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "stacey.martin@brennanhendersonandlewis.com",
+        "field": "email",
+        "source": "unknown",
+        "record_id": "base_6"
+      },
+      {
+        "value": "stacey.maartin@brennanhendersonandlewis.com",
+        "field": "email",
+        "source": "manual_entry",
+        "record_id": "base_6_v1"
+      }
+    ],
+    "all_phones": [
+      {
+        "value": "+1-534-565-7871",
+        "field": "phone",
+        "source": "unknown",
+        "record_id": "base_6"
+      }
+    ],
+    "all_companies": [
+      {
+        "value": "Brennan, Henderson and Lewis",
+        "field": "company",
+        "source": "unknown",
+        "record_id": "base_6"
+      }
+    ],
+    "all_titles": [
+      {
+        "value": "Bonds trader",
+        "field": "title",
+        "source": "unknown",
+        "record_id": "base_6"
+      }
+    ],
+    "other_fields": {
+      "linkedin": [
+        {
+          "value": "linkedin.com/in/staceymartin",
+          "source": "unknown",
+          "record_id": "base_6"
+        }
+      ],
+      "location": [
+        {
+          "value": "Andrewside, IN",
+          "source": "unknown",
+          "record_id": "base_6"
+        }
+      ]
+    },
+    "source_records": [
+      {
+        "id": "base_6",
+        "first_name": "Stacey",
+        "last_name": "Martin",
+        "full_name": "Stacey Martin",
+        "email": "stacey.martin@brennanhendersonandlewis.com",
+        "phone": "+1-534-565-7871",
+        "company": "Brennan, Henderson and Lewis",
+        "title": "Bonds trader",
+        "linkedin": "linkedin.com/in/staceymartin",
+        "location": "Andrewside, IN"
+      },
+      {
+        "id": "base_6_v1",
+        "full_name": "Stacey Maartin",
+        "email": "stacey.maartin@brennanhendersonandlewis.com",
+        "company": "Brennan, Henderson and Lewis",
+        "source": "manual_entry"
+      },
+      {
+        "id": "base_6_v2",
+        "email": "stacey.martin@brennanhendersonandlewis.com",
+        "company": "Brennan, Henderson and Lewis",
+        "source": "email"
+      }
+    ],
+    "merge_timestamp": "2025-12-05T00:40:04.362885",
+    "conflicts": [
+      {
+        "field": "full_name",
+        "values": [
+          "Stacey Maartin",
+          "Stacey Martin"
+        ]
+      },
+      {
+        "field": "email",
+        "values": [
+          "stacey.maartin@brennanhendersonandlewis.com",
+          "stacey.martin@brennanhendersonandlewis.com"
+        ]
+      }
+    ]
+  },
+  {
+    "canonical_id": "base_8",
+    "canonical_name": "Isaiah Ford",
+    "all_names": [
+      {
+        "value": "Isaiah Ford",
+        "field": "full_name",
+        "source": "unknown",
+        "record_id": "base_8"
+      },
+      {
+        "value": "Isaiah",
+        "field": "first_name",
+        "source": "unknown",
+        "record_id": "base_8"
+      },
+      {
+        "value": "Ford",
+        "field": "last_name",
+        "source": "unknown",
+        "record_id": "base_8"
+      },
+      {
+        "value": "Isaiah Foord",
+        "field": "full_name",
+        "source": "manual_entry",
+        "record_id": "base_8_v3"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "isaiah.ford@ramosplc.com",
+        "field": "email",
+        "source": "unknown",
+        "record_id": "base_8"
+      },
+      {
+        "value": "isaiah.foord@ramosplc.com",
+        "field": "email",
+        "source": "manual_entry",
+        "record_id": "base_8_v3"
+      }
+    ],
+    "all_phones": [
+      {
+        "value": "908-501-3267",
+        "field": "phone",
+        "source": "unknown",
+        "record_id": "base_8"
+      }
+    ],
+    "all_companies": [
+      {
+        "value": "Ramos PLC",
+        "field": "company",
+        "source": "unknown",
+        "record_id": "base_8"
+      }
+    ],
+    "all_titles": [
+      {
+        "value": "Oncologist",
+        "field": "title",
+        "source": "unknown",
+        "record_id": "base_8"
+      }
+    ],
+    "other_fields": {
+      "linkedin": [
+        {
+          "value": "linkedin.com/in/isaiahford",
+          "source": "unknown",
+          "record_id": "base_8"
+        }
+      ],
+      "location": [
+        {
+          "value": "East Nicholasfurt, KS",
+          "source": "unknown",
+          "record_id": "base_8"
+        }
+      ]
+    },
+    "source_records": [
+      {
+        "id": "base_8",
+        "first_name": "Isaiah",
+        "last_name": "Ford",
+        "full_name": "Isaiah Ford",
+        "email": "isaiah.ford@ramosplc.com",
+        "phone": "908-501-3267",
+        "company": "Ramos PLC",
+        "title": "Oncologist",
+        "linkedin": "linkedin.com/in/isaiahford",
+        "location": "East Nicholasfurt, KS"
+      },
+      {
+        "id": "base_8_v2",
+        "email": "isaiah.ford@ramosplc.com",
+        "company": "Ramos PLC",
+        "source": "email"
+      },
+      {
+        "id": "base_8_v3",
+        "full_name": "Isaiah Foord",
+        "email": "isaiah.foord@ramosplc.com",
+        "company": "Ramos PLC",
+        "source": "manual_entry"
+      }
+    ],
+    "merge_timestamp": "2025-12-05T00:40:04.363025",
+    "conflicts": [
+      {
+        "field": "full_name",
+        "values": [
+          "Isaiah Foord",
+          "Isaiah Ford"
+        ]
+      },
+      {
+        "field": "email",
+        "values": [
+          "isaiah.foord@ramosplc.com",
+          "isaiah.ford@ramosplc.com"
+        ]
+      }
+    ]
+  },
+  {
+    "canonical_id": "base_9",
+    "canonical_name": "Melissa Jones",
+    "all_names": [
+      {
+        "value": "Melissa Jones",
+        "field": "full_name",
+        "source": "unknown",
+        "record_id": "base_9"
+      },
+      {
+        "value": "Melissa",
+        "field": "first_name",
+        "source": "unknown",
+        "record_id": "base_9"
+      },
+      {
+        "value": "Jones",
+        "field": "last_name",
+        "source": "unknown",
+        "record_id": "base_9"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "melissa.jones@leonardandsons.com",
+        "field": "email",
+        "source": "unknown",
+        "record_id": "base_9"
+      }
+    ],
+    "all_phones": [
+      {
+        "value": "(719)639-9091x6998",
+        "field": "phone",
+        "source": "unknown",
+        "record_id": "base_9"
+      }
+    ],
+    "all_companies": [
+      {
+        "value": "Leonard and Sons",
+        "field": "company",
+        "source": "unknown",
+        "record_id": "base_9"
+      }
+    ],
+    "all_titles": [
+      {
+        "value": "Engineer, energy",
+        "field": "title",
+        "source": "unknown",
+        "record_id": "base_9"
+      }
+    ],
+    "other_fields": {
+      "linkedin": [
+        {
+          "value": "linkedin.com/in/melissajones",
+          "source": "unknown",
+          "record_id": "base_9"
+        }
+      ],
+      "location": [
+        {
+          "value": "Johnfurt, DC",
+          "source": "unknown",
+          "record_id": "base_9"
+        }
+      ]
+    },
+    "source_records": [
+      {
+        "id": "base_9",
+        "first_name": "Melissa",
+        "last_name": "Jones",
+        "full_name": "Melissa Jones",
+        "email": "melissa.jones@leonardandsons.com",
+        "phone": "(719)639-9091x6998",
+        "company": "Leonard and Sons",
+        "title": "Engineer, energy",
+        "linkedin": "linkedin.com/in/melissajones",
+        "location": "Johnfurt, DC"
+      },
+      {
+        "id": "base_9_v1",
+        "email": "melissa.jones@leonardandsons.com",
+        "company": "Leonard and Sons",
+        "source": "email"
+      }
+    ],
+    "merge_timestamp": "2025-12-05T00:40:04.363161",
+    "conflicts": []
+  },
+  {
+    "id": "base_0_v3",
+    "full_name": "Danielle Johnson",
+    "phone": "581-296-0013",
+    "source": "phone_contact"
+  },
+  {
+    "id": "base_2_v1",
+    "full_name": "Stephen Martinez",
+    "email": "stephen92@gmail.com",
+    "source": "personal_contact"
+  },
+  {
+    "id": "fp_2_0",
+    "full_name": "Stephe Martinez",
+    "email": "stephe.martinez@miller-carter.com",
+    "company": "Miller-Carter",
+    "title": "Geologist, engineering",
+    "source": "different_person"
   },
   {
     "id": "fp_2_1",
@@ -457,21 +1319,79 @@
     "source": "different_person"
   },
   {
-    "id": "base_3",
-    "first_name": "Gabrielle",
-    "last_name": "Cameron",
-    "full_name": "Gabrielle Cameron",
-    "email": "gabrielle.cameron@perezinc.com",
-    "phone": "564-613-9537x67242",
-    "company": "Perez Inc",
-    "title": "Television/film/video producer",
-    "linkedin": "linkedin.com/in/gabriellecameron",
-    "location": "Hurstfurt, MN"
+    "id": "fp_4_0",
+    "full_name": "Jeffrey Bright",
+    "email": "jeffrey.bright@graham-chavez.com",
+    "company": "Liu, Baker and Mason",
+    "title": "Editor, magazine features",
+    "location": "Port Colleenhaven, PA",
+    "source": "different_person"
   },
   {
-    "id": "base_3_v1",
-    "full_name": "Gabrielle Cameron",
-    "email": "gabrielle44@gmail.com",
+    "id": "base_5_v2",
+    "full_name": "James Brooks",
+    "title": "Tax adviser",
+    "location": "North Jessicaland, WV",
+    "source": "business_card"
+  },
+  {
+    "id": "fp_5_0",
+    "full_name": "Amanda Brooks",
+    "email": "david.brooks@ryanplc.com",
+    "company": "Ryan PLC",
+    "title": "Public relations officer",
+    "location": "North Jessicaland, WV",
+    "source": "different_person"
+  },
+  {
+    "id": "base_6_v3",
+    "full_name": "Stacey Martin",
+    "email": "stacey85@gmail.com",
     "source": "personal_contact"
+  },
+  {
+    "id": "fp_6_0",
+    "full_name": "Stacey Martin",
+    "email": "stacey.martin@robinsonjonesandwelch.com",
+    "company": "Jones Inc",
+    "title": "Lawyer",
+    "location": "New Johnfort, IL",
+    "source": "different_person"
+  },
+  {
+    "id": "base_7",
+    "first_name": "Amber",
+    "last_name": "Cummings",
+    "full_name": "Amber Cummings",
+    "email": "amber.cummings@johnstonsanchezandkennedy.com",
+    "phone": "(331)516-5667x01065",
+    "company": "Johnston, Sanchez and Kennedy",
+    "title": "Engineer, agricultural",
+    "linkedin": "linkedin.com/in/ambercummings",
+    "location": "New Shane, NE"
+  },
+  {
+    "id": "base_8_v1",
+    "full_name": "Isaiah Ford",
+    "phone": "908-501-3267",
+    "source": "phone_contact"
+  },
+  {
+    "id": "fp_8_0",
+    "full_name": "Isaiah Ford",
+    "email": "isaiah.ford@mitchell-horton.com",
+    "company": "Cowan, Peters and Higgins",
+    "title": "Designer, fashion/clothing",
+    "location": "West Jeff, AR",
+    "source": "different_person"
+  },
+  {
+    "id": "fp_8_1",
+    "full_name": "Isaiah Ford",
+    "email": "isaiah.ford@fitzgeraldbrownandedwards.com",
+    "company": "Silva PLC",
+    "title": "Set designer",
+    "location": "North Susan, CO",
+    "source": "different_person"
   }
 ]
