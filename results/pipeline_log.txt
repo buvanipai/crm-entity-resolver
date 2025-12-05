@@ -1,23 +1,454 @@
-Scanning 43 contacts for duplicates...
-Total comparisons needed: 99
-Comparison 1:
-Contact A: {'id': 'base_0', 'first_name': 'Danielle', 'last_name': 'Johnson', 'full_name': 'Danielle Johnson', 'email': 'danielle.johnson@sanchez-taylor.com', 'phone': '581-296-0013', 'company': 'Sanchez-Taylor', 'title': 'Surveyor, mining', 'linkedin': 'linkedin.com/in/daniellejohnson', 'location': 'Lake Debra, ND'}
-Contact B: {'id': 'base_0_v1', 'full_name': 'D. Johnson', 'title': 'Surveyor, mining', 'company': 'Sanchez-Taylor', 'source': 'calendar'}
-Should Merge: True, Confidence: 0.95
-Reasoning: Same last name (Johnson), same company (Sanchez-Taylor), same job title. 'D.' is a standard abbrevia
+Scanning 90 contacts for duplicates...
+n[DEBUG] Blocking Summary Created 11 blocks.
+Total comparisons needed: 676
+Comparison 10:
+Contact A: {'id': 'base_0_0_v1', 'full_name': 'Donald Garcia', 'phone': '833-589-0838', 'source': 'phone_contact'}
+Contact B: {'id': 'base_2_1_v1', 'full_name': 'J. Porter', 'email': 'j.porter@jones-gentry.com', 'source': 'email'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Donald vs J.). No other matching information. Reject.
 
-Comparison 2:
-Contact A: {'id': 'base_0', 'first_name': 'Danielle', 'last_name': 'Johnson', 'full_name': 'Danielle Johnson', 'email': 'danielle.johnson@sanchez-taylor.com', 'phone': '581-296-0013', 'company': 'Sanchez-Taylor', 'title': 'Surveyor, mining', 'linkedin': 'linkedin.com/in/daniellejohnson', 'location': 'Lake Debra, ND'}
-Contact B: {'id': 'base_0_v2', 'full_name': 'Danielle Johhnson', 'email': 'danielle.johhnson@sanchez-taylor.com', 'company': 'Sanchez-Taylor', 'source': 'manual_entry'}
-Should Merge: True, Confidence: 0.98
-Reasoning: Same full name (Danielle Johnson), same company (Sanchez-Taylor). The email addresses are very simil
+Comparison 20:
+Contact A: {'id': 'base_0_0_v1', 'full_name': 'Donald Garcia', 'phone': '833-589-0838', 'source': 'phone_contact'}
+Contact B: {'id': 'base_5_0_v2', 'full_name': 'Daniel Cox', 'email': 'daniel36@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Donald Garcia vs. Daniel Cox). No matching information.
 
-Comparison 3:
-Contact A: {'id': 'base_0_v1', 'full_name': 'D. Johnson', 'title': 'Surveyor, mining', 'company': 'Sanchez-Taylor', 'source': 'calendar'}
-Contact B: {'id': 'base_0_v2', 'full_name': 'Danielle Johhnson', 'email': 'danielle.johhnson@sanchez-taylor.com', 'company': 'Sanchez-Taylor', 'source': 'manual_entry'}
-Should Merge: True, Confidence: 0.90
-Reasoning: Same company (Sanchez-Taylor), same title. 'D.' is a standard abbreviation for Danielle. The email a
+Comparison 30:
+Contact A: {'id': 'base_0_0_v1', 'full_name': 'Donald Garcia', 'phone': '833-589-0838', 'source': 'phone_contact'}
+Contact B: {'id': 'base_7_3_v1', 'full_name': 'L. Chase', 'email': 'l.chase@wrightandsons.com', 'source': 'email'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Donald Garcia vs L. Chase). Different phone numbers. No shared information to 
+
+Comparison 40:
+Contact A: {'id': 'base_0_1_v2', 'full_name': 'Joy Gardner', 'email': 'joy92@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_2_1_v1', 'full_name': 'J. Porter', 'email': 'j.porter@jones-gentry.com', 'source': 'email'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Joy vs J.). Different emails. Definitely different people.
 
 Progress: 50 comparisons done.
-Found 21 duplicate pairs.
+Comparison 50:
+Contact A: {'id': 'base_0_1_v2', 'full_name': 'Joy Gardner', 'email': 'joy92@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_5_0_v2', 'full_name': 'Daniel Cox', 'email': 'daniel36@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Joy vs Daniel). Distinct emails. Definitely different people.
+
+Comparison 60:
+Contact A: {'id': 'base_0_1_v2', 'full_name': 'Joy Gardner', 'email': 'joy92@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_7_3_v1', 'full_name': 'L. Chase', 'email': 'l.chase@wrightandsons.com', 'source': 'email'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Joy vs L.). Different emails. Definitely different people.
+
+Comparison 70:
+Contact A: {'id': 'base_0_2_v2', 'full_name': 'B. Johnson', 'email': 'b.johnson@rodriguezfigueroaandsanchez.com', 'source': 'email'}
+Contact B: {'id': 'base_2_2_v2', 'full_name': 'N. Day', 'email': 'n.day@jones-gentry.com', 'source': 'email'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (B. Johnson vs N. Day). Different emails. Definitely different people.
+
+Comparison 80:
+Contact A: {'id': 'base_0_2_v2', 'full_name': 'B. Johnson', 'email': 'b.johnson@rodriguezfigueroaandsanchez.com', 'source': 'email'}
+Contact B: {'id': 'base_5_1_v1', 'full_name': 'Tricia Roman', 'title': 'Radiographer, diagnostic', 'location': 'Port Amandaberg, DC', 'source': 'business_card'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (B. Johnson vs Tricia Roman). Different locations. Definitely different people.
+
+Comparison 90:
+Contact A: {'id': 'base_0_2_v2', 'full_name': 'B. Johnson', 'email': 'b.johnson@rodriguezfigueroaandsanchez.com', 'source': 'email'}
+Contact B: {'id': 'base_7_3_v2', 'full_name': 'Lindsey Chase', 'email': 'lindsey10@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (B. vs Lindsey). Different emails. Definitely different people.
+
+Progress: 100 comparisons done.
+Comparison 100:
+Contact A: {'id': 'base_1_0_v1', 'full_name': 'Michael Cooper', 'title': 'Hospital doctor', 'location': 'Barbaraland, AZ', 'source': 'business_card'}
+Contact B: {'id': 'base_3_0_v2', 'full_name': 'William Davis', 'phone': '+1-616-769-7848x018', 'source': 'phone_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Michael Cooper vs William Davis). No matching information. Reject.
+
+Comparison 110:
+Contact A: {'id': 'base_1_0_v1', 'full_name': 'Michael Cooper', 'title': 'Hospital doctor', 'location': 'Barbaraland, AZ', 'source': 'business_card'}
+Contact B: {'id': 'base_5_2_v1', 'full_name': 'John Allen', 'title': 'Public relations officer', 'location': 'West Allison, PA', 'source': 'business_card'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Michael Cooper vs John Allen). Different locations (Barbaraland, AZ vs West Al
+
+Comparison 120:
+Contact A: {'id': 'base_1_0_v1', 'full_name': 'Michael Cooper', 'title': 'Hospital doctor', 'location': 'Barbaraland, AZ', 'source': 'business_card'}
+Contact B: {'id': 'base_7_5_v1', 'full_name': 'Amber Smith', 'email': 'amber85@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Michael vs. Amber). No other matching information.
+
+Comparison 130:
+Contact A: {'id': 'base_1_0_v2', 'full_name': 'Michael Cooper', 'phone': '+1-634-313-1647x52553', 'source': 'phone_contact'}
+Contact B: {'id': 'base_4_0_v1', 'full_name': 'Monica Evans', 'email': 'monica15@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Michael vs Monica). Different email addresses. Definitely different people.
+
+Comparison 140:
+Contact A: {'id': 'base_1_0_v2', 'full_name': 'Michael Cooper', 'phone': '+1-634-313-1647x52553', 'source': 'phone_contact'}
+Contact B: {'id': 'base_6_3_v1', 'full_name': 'Jean Brown', 'email': 'jean96@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Michael vs. Jean). No other matching information. Definitely different people
+
+Progress: 150 comparisons done.
+Comparison 150:
+Contact A: {'id': 'base_1_1_v2', 'full_name': 'Joseph Williams', 'email': 'joseph74@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_2_1_v1', 'full_name': 'J. Porter', 'email': 'j.porter@jones-gentry.com', 'source': 'email'}
+Should Merge: False, Confidence: 0.98
+Reasoning: Different first names (Joseph vs. J.). Different emails. Reject.
+
+Comparison 160:
+Contact A: {'id': 'base_1_1_v2', 'full_name': 'Joseph Williams', 'email': 'joseph74@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_5_0_v2', 'full_name': 'Daniel Cox', 'email': 'daniel36@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Joseph vs Daniel). Different emails.  Definitely different people.
+
+Comparison 170:
+Contact A: {'id': 'base_1_1_v2', 'full_name': 'Joseph Williams', 'email': 'joseph74@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_7_3_v1', 'full_name': 'L. Chase', 'email': 'l.chase@wrightandsons.com', 'source': 'email'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Joseph Williams vs L. Chase). Different emails. No matching information.
+
+Comparison 180:
+Contact A: {'id': 'base_1_3_v2', 'full_name': 'Sandra Miller', 'email': 'sandra90@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_3_2_v1', 'full_name': 'Courtney Conner', 'email': 'courtney81@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Sandra Miller vs Courtney Conner). Different emails. Reject.
+
+Comparison 190:
+Contact A: {'id': 'base_1_3_v2', 'full_name': 'Sandra Miller', 'email': 'sandra90@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_6_0_v2', 'full_name': 'John Brown', 'phone': '405-918-3473', 'source': 'phone_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Sandra vs John). No matching information. Definitely different people.
+
+Progress: 200 comparisons done.
+Comparison 200:
+Contact A: {'id': 'base_2_1_v1', 'full_name': 'J. Porter', 'email': 'j.porter@jones-gentry.com', 'source': 'email'}
+Contact B: {'id': 'base_2_2_v2', 'full_name': 'N. Day', 'email': 'n.day@jones-gentry.com', 'source': 'email'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (J vs. N). Same company is irrelevant. Reject.
+
+Comparison 210:
+Contact A: {'id': 'base_2_1_v1', 'full_name': 'J. Porter', 'email': 'j.porter@jones-gentry.com', 'source': 'email'}
+Contact B: {'id': 'base_5_1_v1', 'full_name': 'Tricia Roman', 'title': 'Radiographer, diagnostic', 'location': 'Port Amandaberg, DC', 'source': 'business_card'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (J. vs Tricia). Different emails. Highly unlikely to be the same person. Also,
+
+Comparison 220:
+Contact A: {'id': 'base_2_1_v1', 'full_name': 'J. Porter', 'email': 'j.porter@jones-gentry.com', 'source': 'email'}
+Contact B: {'id': 'base_7_3_v2', 'full_name': 'Lindsey Chase', 'email': 'lindsey10@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (J. Porter vs Lindsey Chase). Different emails. No matching information.
+
+Comparison 230:
+Contact A: {'id': 'base_2_2_v2', 'full_name': 'N. Day', 'email': 'n.day@jones-gentry.com', 'source': 'email'}
+Contact B: {'id': 'base_4_1_v1', 'full_name': 'Danielle Lynch', 'email': 'danielle9@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (N. vs. Danielle). Different emails. Highly unlikely to be the same person.
+
+Comparison 240:
+Contact A: {'id': 'base_2_2_v2', 'full_name': 'N. Day', 'email': 'n.day@jones-gentry.com', 'source': 'email'}
+Contact B: {'id': 'base_7_0_v2', 'full_name': 'Amanda Taylor', 'phone': '432-867-7360', 'source': 'phone_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (N. vs. Amanda). No matching information. Strong negative.
+
+Progress: 250 comparisons done.
+Comparison 250:
+Contact A: {'id': 'base_2_3_v1', 'full_name': 'Douglas Taylor', 'title': 'Solicitor', 'location': 'Juliechester, MH', 'source': 'business_card'}
+Contact B: {'id': 'base_4_0_v1', 'full_name': 'Monica Evans', 'email': 'monica15@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Douglas Taylor vs Monica Evans). No matching information.
+
+Comparison 260:
+Contact A: {'id': 'base_2_3_v1', 'full_name': 'Douglas Taylor', 'title': 'Solicitor', 'location': 'Juliechester, MH', 'source': 'business_card'}
+Contact B: {'id': 'base_6_3_v1', 'full_name': 'Jean Brown', 'email': 'jean96@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Douglas Taylor vs Jean Brown). No matching information.
+
+Comparison 270:
+Contact A: {'id': 'base_3_0_v2', 'full_name': 'William Davis', 'phone': '+1-616-769-7848x018', 'source': 'phone_contact'}
+Contact B: {'id': 'base_3_2_v1', 'full_name': 'Courtney Conner', 'email': 'courtney81@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (William Davis vs. Courtney Conner). No matching information.
+
+Comparison 280:
+Contact A: {'id': 'base_3_0_v2', 'full_name': 'William Davis', 'phone': '+1-616-769-7848x018', 'source': 'phone_contact'}
+Contact B: {'id': 'base_6_0_v2', 'full_name': 'John Brown', 'phone': '405-918-3473', 'source': 'phone_contact'}
+Should Merge: False, Confidence: 0.98
+Reasoning: Different full names (William Davis vs. John Brown). Different phone numbers.  Highly unlikely to be
+
+Comparison 290:
+Contact A: {'id': 'base_3_1_v2', 'full_name': 'B. Rodriguez', 'email': 'b.rodriguez@rossrobinsonandbright.com', 'source': 'email'}
+Contact B: {'id': 'base_3_2_v1', 'full_name': 'Courtney Conner', 'email': 'courtney81@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different last names (Rodriguez vs Conner). Different emails. Clearly different individuals.
+
+Progress: 300 comparisons done.
+Comparison 300:
+Contact A: {'id': 'base_3_1_v2', 'full_name': 'B. Rodriguez', 'email': 'b.rodriguez@rossrobinsonandbright.com', 'source': 'email'}
+Contact B: {'id': 'base_6_0_v2', 'full_name': 'John Brown', 'phone': '405-918-3473', 'source': 'phone_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (B. Rodriguez vs John Brown). Different contact methods (email vs phone). No sh
+
+Comparison 310:
+Contact A: {'id': 'base_3_2_v1', 'full_name': 'Courtney Conner', 'email': 'courtney81@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_4_0_v1', 'full_name': 'Monica Evans', 'email': 'monica15@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Courtney Conner vs Monica Evans). Different emails. No matching information.
+
+Comparison 320:
+Contact A: {'id': 'base_3_2_v1', 'full_name': 'Courtney Conner', 'email': 'courtney81@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_6_3_v1', 'full_name': 'Jean Brown', 'email': 'jean96@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Courtney Conner vs Jean Brown). Different emails. No matching information.
+
+Comparison 330:
+Contact A: {'id': 'base_4_0_v1', 'full_name': 'Monica Evans', 'email': 'monica15@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_4_1_v1', 'full_name': 'Danielle Lynch', 'email': 'danielle9@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Monica Evans vs. Danielle Lynch). Different emails. Definitely different peopl
+
+Comparison 340:
+Contact A: {'id': 'base_4_0_v1', 'full_name': 'Monica Evans', 'email': 'monica15@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_7_0_v2', 'full_name': 'Amanda Taylor', 'phone': '432-867-7360', 'source': 'phone_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Monica vs. Amanda). Different emails. Reject.
+
+Progress: 350 comparisons done.
+Comparison 350:
+Contact A: {'id': 'base_4_0_v2', 'full_name': 'Monica Evans', 'email': 'monica47@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_5_1_v1', 'full_name': 'Tricia Roman', 'title': 'Radiographer, diagnostic', 'location': 'Port Amandaberg, DC', 'source': 'business_card'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Monica vs Tricia). Different emails. Different titles and locations. Definite
+
+Comparison 360:
+Contact A: {'id': 'base_4_0_v2', 'full_name': 'Monica Evans', 'email': 'monica47@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_7_3_v2', 'full_name': 'Lindsey Chase', 'email': 'lindsey10@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Monica vs Lindsey). Different emails. Definitely different people.
+
+Comparison 370:
+Contact A: {'id': 'base_4_1_v1', 'full_name': 'Danielle Lynch', 'email': 'danielle9@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_6_0_v2', 'full_name': 'John Brown', 'phone': '405-918-3473', 'source': 'phone_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Danielle Lynch vs John Brown).  Highly unlikely to be the same person.
+
+Comparison 380:
+Contact A: {'id': 'base_4_3_v1', 'full_name': 'Amber Osborne', 'email': 'amber44@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_5_0_v2', 'full_name': 'Daniel Cox', 'email': 'daniel36@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Amber vs. Daniel). No matching information. Definitely different people.
+
+Comparison 390:
+Contact A: {'id': 'base_4_3_v1', 'full_name': 'Amber Osborne', 'email': 'amber44@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_7_3_v1', 'full_name': 'L. Chase', 'email': 'l.chase@wrightandsons.com', 'source': 'email'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Amber vs L.). No other matching information to overcome this critical rule.
+
+Progress: 400 comparisons done.
+Comparison 400:
+Contact A: {'id': 'base_5_0_v2', 'full_name': 'Daniel Cox', 'email': 'daniel36@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_6_3_v1', 'full_name': 'Jean Brown', 'email': 'jean96@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Daniel Cox vs Jean Brown). Different emails.
+
+[SUSPICIOUS MERGE]: Tricia Roman <-> T. Roman (0.85)
+Comparison 410:
+Contact A: {'id': 'base_5_1_v1', 'full_name': 'Tricia Roman', 'title': 'Radiographer, diagnostic', 'location': 'Port Amandaberg, DC', 'source': 'business_card'}
+Contact B: {'id': 'base_5_2_v1', 'full_name': 'John Allen', 'title': 'Public relations officer', 'location': 'West Allison, PA', 'source': 'business_card'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Tricia Roman vs John Allen). Location conflict (Port Amandaberg, DC vs West Al
+
+Comparison 420:
+Contact A: {'id': 'base_5_1_v1', 'full_name': 'Tricia Roman', 'title': 'Radiographer, diagnostic', 'location': 'Port Amandaberg, DC', 'source': 'business_card'}
+Contact B: {'id': 'base_7_5_v1', 'full_name': 'Amber Smith', 'email': 'amber85@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (Tricia Roman vs Amber Smith). No matching information.
+
+Comparison 430:
+Contact A: {'id': 'base_5_1_v2', 'full_name': 'T. Roman', 'email': 't.roman@sellersgeorgeandburns.com', 'source': 'email'}
+Contact B: {'id': 'base_7_3_v2', 'full_name': 'Lindsey Chase', 'email': 'lindsey10@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different full names (T. Roman vs Lindsey Chase). Different emails. No matching information.
+
+Comparison 440:
+Contact A: {'id': 'base_5_2_v1', 'full_name': 'John Allen', 'title': 'Public relations officer', 'location': 'West Allison, PA', 'source': 'business_card'}
+Contact B: {'id': 'base_7_3_v1', 'full_name': 'L. Chase', 'email': 'l.chase@wrightandsons.com', 'source': 'email'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (John vs L.).
+
+Progress: 450 comparisons done.
+Comparison 450:
+Contact A: {'id': 'base_5_3_v1', 'full_name': 'Ashley Miller', 'title': 'Engineer, mining', 'location': 'Lake Larry, TN', 'source': 'business_card'}
+Contact B: {'id': 'base_7_3_v1', 'full_name': 'L. Chase', 'email': 'l.chase@wrightandsons.com', 'source': 'email'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different last names (Miller vs. Chase). No matching information. Definitely different people. The '
+
+Comparison 460:
+Contact A: {'id': 'base_6_0_v2', 'full_name': 'John Brown', 'phone': '405-918-3473', 'source': 'phone_contact'}
+Contact B: {'id': 'base_7_3_v2', 'full_name': 'Lindsey Chase', 'email': 'lindsey10@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (John vs. Lindsey). Different emails. Clear negative.
+
+Comparison 470:
+Contact A: {'id': 'base_6_3_v1', 'full_name': 'Jean Brown', 'email': 'jean96@gmail.com', 'source': 'personal_contact'}
+Contact B: {'id': 'base_7_5_v1', 'full_name': 'Amber Smith', 'email': 'amber85@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Jean vs Amber). Different emails. Definitely different people.
+
+Comparison 480:
+Contact A: {'id': 'base_7_0_v2', 'full_name': 'Amanda Taylor', 'phone': '432-867-7360', 'source': 'phone_contact'}
+Contact B: {'id': 'base_7_3_v1', 'full_name': 'L. Chase', 'email': 'l.chase@wrightandsons.com', 'source': 'email'}
+Should Merge: False, Confidence: 0.98
+Reasoning: Different first names (Amanda vs. L). Different emails. Likely different people.
+
+Comparison 490:
+Contact A: {'id': 'base_7_3_v1', 'full_name': 'L. Chase', 'email': 'l.chase@wrightandsons.com', 'source': 'email'}
+Contact B: {'id': 'base_7_3_v2', 'full_name': 'Lindsey Chase', 'email': 'lindsey10@gmail.com', 'source': 'personal_contact'}
+Should Merge: False, Confidence: 0.97
+Reasoning: Different full names (L. Chase vs Lindsey Chase). While the last names match, the first names are di
+
+Progress: 500 comparisons done.
+Comparison 500:
+Contact A: {'id': 'base_1_0', 'first_name': 'Michael', 'last_name': 'Cooper', 'full_name': 'Michael Cooper', 'company': 'Garcia-James'}
+Contact B: {'id': 'base_1_1', 'first_name': 'Joseph', 'last_name': 'Williams', 'full_name': 'Joseph Williams', 'company': 'Garcia-James'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first and last names. Different people.
+
+Comparison 510:
+Contact A: {'id': 'base_1_1', 'first_name': 'Joseph', 'last_name': 'Williams', 'full_name': 'Joseph Williams', 'company': 'Garcia-James'}
+Contact B: {'id': 'base_1_2_v2', 'full_name': 'S. Martinez', 'title': 'Transport planner', 'company': 'Garcia-James', 'source': 'calendar'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Joseph vs. S.). Different people. The 'S' is highly unlikely to be a nickname
+
+[SUSPICIOUS MERGE]: Stephen <-> S. Martinez (0.9)
+Comparison 520:
+Contact A: {'id': 'base_1_2', 'first_name': 'Stephen', 'last_name': 'Martinez', 'full_name': 'Stephen Martinez', 'company': 'Garcia-James'}
+Contact B: {'id': 'fp_1_1', 'full_name': 'Hailey Cooper', 'email': 'jeffrey.cooper@garcia-james.com', 'company': 'Garcia-James', 'title': 'Journalist, broadcasting', 'location': 'East Lydiamouth, MO', 'source': 'different_person'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Stephen vs. Hailey). This is a hard negative. Even though the company matches
+
+[SUSPICIOUS MERGE]: Stephen Martiinez <-> S. Martinez (0.9)
+Comparison 530:
+Contact A: {'id': 'base_1_3', 'first_name': 'Sandra', 'last_name': 'Miller', 'full_name': 'Sandra Miller', 'company': 'Garcia-James'}
+Contact B: {'id': 'base_1_3_v1', 'email': 'sandra.miller@garcia-james.com', 'company': 'Garcia-James', 'source': 'email'}
+Should Merge: True, Confidence: 0.95
+Reasoning: Same first and last name, same company, and email. High confidence of a match.
+
+Comparison 540:
+Contact A: {'id': 'base_2_0', 'first_name': 'Ashley', 'last_name': 'Robbins', 'full_name': 'Ashley Robbins', 'company': 'Jones-Gentry'}
+Contact B: {'id': 'base_2_2_v1', 'full_name': 'Nicole Day', 'email': 'nicole@jones-gentry.com', 'company': 'Jones-Gentry', 'source': 'email'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Ashley vs. Nicole). Family rule applies. Sharing a company and last name is n
+
+[SUSPICIOUS MERGE]: Jason <-> J. Porter (0.9)
+Progress: 550 comparisons done.
+Comparison 550:
+Contact A: {'id': 'base_2_1', 'first_name': 'Jason', 'last_name': 'Porter', 'full_name': 'Jason Porter', 'company': 'Jones-Gentry'}
+Contact B: {'id': 'base_2_2', 'first_name': 'Nicole', 'last_name': 'Day', 'full_name': 'Nicole Day', 'company': 'Jones-Gentry'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Jason vs. Nicole).  Definitely different people.
+
+Comparison 560:
+Contact A: {'id': 'base_2_2', 'first_name': 'Nicole', 'last_name': 'Day', 'full_name': 'Nicole Day', 'company': 'Jones-Gentry'}
+Contact B: {'id': 'base_2_3_v2', 'email': 'douglas.taylor@jones-gentry.com', 'company': 'Jones-Gentry', 'source': 'email'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Nicole vs. Douglas). Company matches, but that's not enough to merge. Email a
+
+[SUSPICIOUS MERGE]: William <-> W. Davis (0.9)
+Comparison 570:
+Contact A: {'id': 'base_3_0_v1', 'full_name': 'W. Davis', 'title': 'Pharmacist, hospital', 'company': 'Ross, Robinson and Bright', 'source': 'calendar'}
+Contact B: {'id': 'base_3_1_v1', 'full_name': 'Brandon Roodriguez', 'email': 'brandon.roodriguez@rossrobinsonandbright.com', 'company': 'Ross, Robinson and Bright', 'source': 'manual_entry'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (W. Davis vs. Brandon). Company match is not enough. Different emails.
+
+Comparison 580:
+Contact A: {'id': 'base_4_0', 'first_name': 'Monica', 'last_name': 'Evans', 'full_name': 'Monica Evans', 'company': 'Romero Inc'}
+Contact B: {'id': 'base_4_1_v2', 'full_name': 'Danielle Lyncch', 'email': 'danielle.lyncch@romeroinc.com', 'company': 'Romero Inc', 'source': 'manual_entry'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Monica vs Danielle). Different last names (Evans vs Lyncch). Different emails
+
+Comparison 590:
+Contact A: {'id': 'base_4_1_v2', 'full_name': 'Danielle Lyncch', 'email': 'danielle.lyncch@romeroinc.com', 'company': 'Romero Inc', 'source': 'manual_entry'}
+Contact B: {'id': 'base_4_2', 'first_name': 'Eric', 'last_name': 'Farmer', 'full_name': 'Eric Farmer', 'company': 'Romero Inc'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Danielle vs. Eric). Sharing a company is not enough to merge.
+
+Progress: 600 comparisons done.
+Comparison 600:
+Contact A: {'id': 'base_5_0', 'first_name': 'Daniel', 'last_name': 'Cox', 'full_name': 'Daniel Cox', 'company': 'Sellers, George and Burns'}
+Contact B: {'id': 'base_5_0_v1', 'full_name': 'Daniel Cox', 'email': 'daniel.cox@sellersgeorgeandburns.com', 'company': 'Sellers, George and Burns', 'source': 'manual_entry'}
+Should Merge: True, Confidence: 0.98
+Reasoning: Same first and last name (Daniel Cox). Same company. Email matches the company. Likely the same pers
+
+Comparison 610:
+Contact A: {'id': 'base_5_0_v1', 'full_name': 'Daniel Cox', 'email': 'daniel.cox@sellersgeorgeandburns.com', 'company': 'Sellers, George and Burns', 'source': 'manual_entry'}
+Contact B: {'id': 'base_5_3_v2', 'full_name': 'A. Miller', 'title': 'Midwife', 'company': 'Sellers, George and Burns', 'source': 'calendar'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Daniel vs A.). Company and last name match, but that's not enough. Distinct i
+
+[SUSPICIOUS MERGE]: John <-> J. Allen (0.9)
+Comparison 620:
+Contact A: {'id': 'base_5_3', 'first_name': 'Ashley', 'last_name': 'Miller', 'full_name': 'Ashley Miller', 'company': 'Sellers, George and Burns'}
+Contact B: {'id': 'base_5_3_v2', 'full_name': 'A. Miller', 'title': 'Midwife', 'company': 'Sellers, George and Burns', 'source': 'calendar'}
+Should Merge: True, Confidence: 0.90
+Reasoning: Entity B's full name is A. Miller, which is likely Ashley Miller. Same company and title. No conflic
+
+[SUSPICIOUS MERGE]: Ashley <-> A. Miller (0.9)
+Comparison 630:
+Contact A: {'id': 'base_6_1', 'first_name': 'Andrew', 'last_name': 'Spencer', 'full_name': 'Andrew Spencer', 'company': 'Lam-Hayes'}
+Contact B: {'id': 'base_6_2', 'first_name': 'Brianna', 'last_name': 'Smith', 'full_name': 'Brianna Smith', 'company': 'Lam-Hayes'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Andrew vs. Brianna). This is a hard negative. The family rule applies here, s
+
+Comparison 640:
+Contact A: {'id': 'base_6_1_v2', 'full_name': 'Andrew Spencer', 'email': 'andrew@lam-hayes.com', 'company': 'Lam-Hayes', 'source': 'email'}
+Contact B: {'id': 'base_6_2_v2', 'full_name': 'B. Smith', 'title': 'Financial manager', 'company': 'Lam-Hayes', 'source': 'calendar'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Andrew vs B.). Company match is not enough. Complete mismatch.
+
+[SUSPICIOUS MERGE]: Brianna <-> B. Smith (0.85)
+[SUSPICIOUS MERGE]: Jean <-> J. Brown (0.85)
+Progress: 650 comparisons done.
+Comparison 650:
+Contact A: {'id': 'base_7_0', 'first_name': 'Amanda', 'last_name': 'Taylor', 'full_name': 'Amanda Taylor', 'company': 'Wright and Sons'}
+Contact B: {'id': 'base_7_2', 'first_name': 'Nancy', 'last_name': 'Jones', 'full_name': 'Nancy Jones', 'company': 'Wright and Sons'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Amanda vs Nancy). Different last names (Taylor vs Jones). The company match i
+
+Comparison 660:
+Contact A: {'id': 'base_7_1', 'first_name': 'Isaiah', 'last_name': 'Ford', 'full_name': 'Isaiah Ford', 'company': 'Wright and Sons'}
+Contact B: {'id': 'base_7_4', 'first_name': 'Corey', 'last_name': 'Pearson', 'full_name': 'Corey Pearson', 'company': 'Wright and Sons'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Different first names (Isaiah vs. Corey). Family rule applies. Company match is not enough.
+
+[SUSPICIOUS MERGE]: Nancy <-> N. Jones (0.9)
+Comparison 670:
+Contact A: {'id': 'base_7_2_v1', 'email': 'nancy.jones@wrightandsons.com', 'company': 'Wright and Sons', 'source': 'email'}
+Contact B: {'id': 'base_7_5', 'first_name': 'Amber', 'last_name': 'Smith', 'full_name': 'Amber Smith', 'company': 'Wright and Sons'}
+Should Merge: False, Confidence: 0.99
+Reasoning: Entity A has email and company (Nancy Jones). Entity B has a different first name (Amber) and a diff
+
+Found 28 duplicate pairs.
+
+[DEBUG] Clustering: Processing 47 linked entities.
+  -> Formed Group of 2: ['Michael Cooper', 'Michael Cooper']
+  -> Formed Group of 2: ['Monica Evans', 'Monica Evans']
+  -> Formed Group of 2: ['Tricia Roman', 'T. Roman']
+  -> Formed Group of 2: ['Amanda Taylor', 'Amanda Taylor']
+  -> Formed Group of 3: ['Stephen Martinez', 'S. Martinez', 'Stephen Martiinez']
+  -> Formed Group of 2: ['Sandra Miller', 'sandra.miller@garcia-james.com']
+  -> Formed Group of 2: ['Ashley Robbins', 'ashley.robbins@jones-gentry.com']
+  -> Formed Group of 2: ['Jason Porter', 'J. Porter']
+  -> Formed Group of 2: ['Nicole Day', 'Nicole Day']
+  -> Formed Group of 2: ['Douglas Taylor', 'douglas.taylor@jones-gentry.com']
+  -> Formed Group of 2: ['William Davis', 'W. Davis']
+  -> Formed Group of 2: ['Brandon Rodriguez', 'Brandon Roodriguez']
+  -> Formed Group of 2: ['Danielle Lynch', 'Danielle Lyncch']
+  -> Formed Group of 2: ['Eric Farmer', 'Eric Farmmer']
+  -> Formed Group of 2: ['Amber Osborne', 'Amber Osborne']
+  -> Formed Group of 2: ['Daniel Cox', 'Daniel Cox']
+  -> Formed Group of 2: ['John Allen', 'J. Allen']
+  -> Formed Group of 2: ['Ashley Miller', 'A. Miller']
+  -> Formed Group of 3: ['Andrew Spencer', 'Andrew Spencer', 'Andrew Speencer']
+  -> Formed Group of 2: ['Brianna Smith', 'B. Smith']
+  -> Formed Group of 2: ['Jean Brown', 'J. Brown']
+  -> Formed Group of 3: ['Nancy Jones', 'N. Jones', 'nancy.jones@wrightandsons.com']
 Deduplication complete. Results saved to results/ directory.

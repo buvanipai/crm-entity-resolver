@@ -11,6 +11,7 @@ from entity_resolver import EntityResolver
 from merge_strategy import MergeStrategy
 from datetime import datetime
 import sys
+import time
 
 log_file = open("results/pipeline_log.txt", "w")
 
@@ -36,7 +37,7 @@ class EntityResolutionPipeline:
         print(f"Scanning {n} contacts for duplicates...", file=log_file)
         
         compared = 0
-        batch_size = 8
+        batch_size = 6
         pairs_to_compare = []
         pair_contacts = []
         
@@ -45,6 +46,10 @@ class EntityResolutionPipeline:
         for i, contact in enumerate(contacts):
             key = contact.get('company', 'unknown').lower()
             blocks.setdefault(key, []).append((i, contact))
+            
+        # print(f"n[DEBUG] Blocking Summary Created {len(blocks)} blocks.", file=log_file)
+        # if len(blocks) < 2:
+        #     print(f"n[WARNING] Blocking created less than 2 blocks. Check blocking strategy.", file=log_file)
             
         pairs_to_compare = []
         pair_contacts = []
@@ -58,7 +63,14 @@ class EntityResolutionPipeline:
 
         print(f"Total comparisons needed: {len(pairs_to_compare)}", file=log_file)
         
+        print(f"[CONFIRM] Total pairs to compare after blocking: {len(pairs_to_compare)}. Proceed with API calls? (y/n)")
+        proceed = input().strip().lower()
+        if proceed != 'y':
+            print("Aborting duplicate search.")
+            return []
+        
         for batch_start in range(0, len(pairs_to_compare), batch_size):
+            time.sleep(2.5)
             batch_pairs = pairs_to_compare[batch_start:batch_start + batch_size]
             batch_indices = pair_contacts[batch_start:batch_start + batch_size]
             
@@ -72,8 +84,10 @@ class EntityResolutionPipeline:
                 
                 if compared % 50 == 0:
                     print(f"Progress: {compared} comparisons done.", file=log_file)
+                if compared % 100 == 0:
+                    print(f"Progress: {compared} comparisons done.")
                     
-                if compared <= 3:
+                if compared % 10 == 0:
                     print(f"Comparison {compared}:", file=log_file)
                     print(f"Contact A: {contacts[i]}", file=log_file)
                     print(f"Contact B: {contacts[j]}", file=log_file)
@@ -81,6 +95,17 @@ class EntityResolutionPipeline:
                     print(f"Reasoning: {decision.reasoning[:100]}\n", file=log_file)
                 
                 if decision.should_merge and decision.confidence >= self.confidence_threshold:
+                    name_a_str = contacts[i].get('first_name') or contacts[i].get('full_name') or ""
+                    name_b_str = contacts[j].get('first_name') or contacts[j].get('full_name') or ""
+                    
+                    parts_a = name_a_str.split()
+                    parts_b = name_b_str.split()
+                    
+                    # Only compare if both have names (skips email_only records)
+                    if parts_a and parts_b:
+                        if parts_a[0].lower() != parts_b[0].lower():
+                             print(f"[SUSPICIOUS MERGE]: {name_a_str} <-> {name_b_str} ({decision.confidence})", file=log_file)
+
                     duplicates.append((contacts[i], contacts[j], decision.confidence))
                     
         print(f"Found {len(duplicates)} duplicate pairs.", file=log_file)
@@ -126,38 +151,45 @@ class EntityResolutionPipeline:
         Groups transitive duplicates together.
         """
         
-        id_to_contacts = {}
-        parent = {}
+        adj = {}
+        id_map = {}
         
-        def find(x):
-            if parent[x] != x:
-                parent[x] = find(parent[x])
-            return parent[x]
+        for ea, eb, _ in duplicate_pairs:
+            id_a, id_b = ea['id'], eb['id']
+            id_map[id_a] = ea
+            id_map[id_b] = eb
+            
+            if id_a not in adj: adj[id_a] = []
+            if id_b not in adj: adj[id_b] = []
+            
+            adj[id_a].append(id_b)
+            adj[id_b].append(id_a)
         
-        def union(x, y):
-            px, py = find(x), find(y)
-            if px != py:
-                parent[px] = py
+        groups = []
+        visited = set()
+        
+        # print(f"\n[DEBUG] Clustering: Processing {len(id_map)} linked entities.", file=log_file)
+        
+        for uid in adj:
+            if uid not in visited:
+                component = []
+                stack = [uid]
+                visited.add(uid)
+                while stack:
+                    node = stack.pop()
+                    component.append(id_map[node])
+                    for neighbor in adj[node]:
+                        if neighbor not in visited:
+                            visited.add(neighbor)
+                            stack.append(neighbor)
                 
-        for entity_a, entity_b, _ in duplicate_pairs:
-            id_a, id_b = entity_a['id'], entity_b['id']
-            id_to_contacts[id_a] = entity_a
-            id_to_contacts[id_b] = entity_b
-            if id_a not in parent:
-                parent[id_a] = id_a
-            if id_b not in parent:
-                parent[id_b] = id_b
-            union(id_a, id_b)
-            
-            
-        groups_dict = {}
-        for contact_id in parent:
-            root = find(contact_id)
-            if root not in groups_dict:
-                groups_dict[root] = []
-            groups_dict[root].append(id_to_contacts[contact_id])
-            
-        return list(groups_dict.values())
+                groups.append(component)
+                # [DEBUG 3: CLUSTER SIZE - SAFE VERSION]
+                # Fallback to ID if full_name is missing (e.g. email_only records)
+                names = [c.get('full_name') or c.get('email') or c['id'] for c in component]
+                print(f"  -> Formed Group of {len(component)}: {names}", file=log_file)
+                
+        return groups
     
 
 if __name__ == "__main__":
@@ -167,22 +199,10 @@ if __name__ == "__main__":
     with open("data/ground_truth.json", "r") as f:
         ground_truth = json.load(f)
         
-    # contact_lookup = {c['id']: c for c in contacts}
-    
-    # test_contacts = []
-    # seen_ids = set()
-    # for gt in ground_truth[:10]:
-    #     if gt['entity_a_id'] not in seen_ids:
-    #         test_contacts.append(contact_lookup[gt['entity_a_id']])
-    #         seen_ids.add(gt['entity_a_id'])
-    #     if gt['entity_b_id'] not in seen_ids:
-    #         test_contacts.append(contact_lookup[gt['entity_b_id']])
-    #         seen_ids.add(gt['entity_b_id'])
-        
-    # print(f"Testing pipeline on {len(test_contacts)} contacts\n")
-    
+    # num_test_contacts = 20
+    # contacts = contacts[:num_test_contacts]
+       
     pipeline = EntityResolutionPipeline(confidence_threshold=0.5)
-    # deduplicated_contacts, stats = pipeline.deduplicate(test_contacts)
     deduplicated_contacts, stats = pipeline.deduplicate(contacts)
     
     print("\n" + "=" * 40)

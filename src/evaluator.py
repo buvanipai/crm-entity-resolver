@@ -103,6 +103,7 @@ class Evaluator:
             
         batch_size = 6
         for batch_start in range(0, len(eval_pairs), batch_size):
+            time.sleep(2.5)
             if (batch_start // batch_size + 1) % 5 == 0:
                 print(f"Progress: {batch_start}/{len(eval_pairs)} pairs evaluated.")
                 

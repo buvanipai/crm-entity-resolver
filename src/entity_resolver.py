@@ -65,73 +65,7 @@ class EntityResolver:
                 HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
             }
         )
-        self.few_shot_examples = self._create_few_shot_examples()
         
-    def _create_few_shot_examples(self) -> List[Dict]:
-        """
-        Create few-shot examples for the prompt.
-        """
-        return [
-             {
-                "entity_a": {
-                    "full_name": "Sarah Chen",
-                    "email": "sarah.chen@acme.com",
-                    "company": "Acme Corp"
-                },
-                "entity_b": {
-                    "full_name": "S. Chen",
-                    "title": "VP Engineering",
-                    "company": "Acme Corp"
-                },
-                "decision": {
-                    "should_merge": True,
-                    "confidence": 0.9,
-                    "reasoning": "Same last name (Chen), same company (Acme Corp). 'S.' is standard abbreviation for Sarah. Email domain matches company.",
-                    "evidence_for": ["Same last name", "Same company", "Name abbreviation pattern"],
-                    "evidence_against": ["Missing email in entity_b"]
-                }
-            },
-            {
-                "entity_a": {
-                    "full_name": "Michael Johnson",
-                    "email": "mjohnson@techcorp.com",
-                    "company": "TechCorp"
-                },
-                "entity_b": {
-                    "full_name": "Michael Johnson",
-                    "email": "mike.j@designco.com",
-                    "title": "Designer",
-                    "company": "DesignCo"
-                },
-                "decision": {
-                    "should_merge": False,
-                    "confidence": 0.85,
-                    "reasoning": "Same name but different companies and completely different email domains. Michael Johnson is a common name. No other matching identifiers.",
-                    "evidence_for": ["Same full name"],
-                    "evidence_against": ["Different companies", "Different email domains", "Common name (high collision risk)"]
-                }
-            },
-            {
-                "entity_a": {
-                    "full_name": "Robert Smith",
-                    "phone": "+1-555-0123",
-                    "company": "DataCo"
-                },
-                "entity_b": {
-                    "full_name": "Bob Smith",
-                    "email": "bob.smith@dataco.com",
-                    "company": "DataCo"
-                },
-                "decision": {
-                    "should_merge": True,
-                    "confidence": 0.95,
-                    "reasoning": "Bob is standard nickname for Robert. Same last name, same company. Email follows naming pattern (bob.smith matches Bob Smith).",
-                    "evidence_for": ["Nickname match (Bob=Robert)", "Same last name", "Same company", "Email matches name pattern"],
-                    "evidence_against": []
-                }
-            }
-        ]
-    
     @retry(
         wait=wait_exponential(multiplier=1, min=4, max=60),
         stop=stop_after_attempt(3),
@@ -156,8 +90,6 @@ class EntityResolver:
             pairs = [(entity_a, entity_b)]
             
         prompt = self._build_prompt(pairs)
-        
-        # print(f"\n=== DEBUG: Last 1000 chars of prompt ===\n{prompt[-1000:]}\n=== END DEBUG ===\n")
         
         try:
             content = self._call_llm(prompt)            
@@ -192,51 +124,48 @@ class EntityResolver:
             
     def _build_prompt(self, pairs: List[Tuple[Dict, Dict]]) -> str:
         """
-        Constructs the few-shot prompt for entity matching.
+        Constructs the prompt with INLINE examples to enforce strict matching.
         """
-        
-        example_text = ""
-        
-        for i, example in enumerate(self.few_shot_examples):
-            example_text += f"Example {i+1}:\n"
-            example_text += f"Entity A: {json.dumps(example['entity_a'], indent=2)}\n"
-            example_text += f"Entity B: {json.dumps(example['entity_b'], indent=2)}\n"
-            example_text += f"Decision: {json.dumps(example['decision'], indent=2)}\n"
         
         pairs_text = ""
         for i, (a, b) in enumerate(pairs):
-            pairs_text += f"Pair {i+1}:\nEntity A:\n{json.dumps(a, indent=2)}\nEntity B:\n{json.dumps(b, indent=2)}\n"
+            pairs_text += f"Target Pair {i+1}:\nEntity A: {json.dumps(a)}\nEntity B: {json.dumps(b)}\n\n"
         
         prompt = f"""
+        You are a cynical Data Integrity Auditor. Your goal is to REJECT false matches.
         
-        You are an expert at entity resolution for CRM systems. Your task is to determine if two contact records represent the same person.
+        Task: Analyze the following {len(pairs)} pair(s) and determine if they are the EXACT SAME individual.
         
-        Consider these signals:
-        - Name matching (including nicknames, initials, abbreviations)
-        - Email addresses (domain, username patterns)
-        - Company names
-        - Phone numbers
-        - Job titles and locations
-        - Common name collision risk (e.g., "John Smith" is high risk)
+        CRITICAL RULES (Trumps all other evidence)
+        1. Different First Names = DIFFERENT PEOPLE. (e.g., "Michael" vs "Michelle").
+           - Exception: Common nicknames (Robert -> Bob) are allowed.
+        2. Family Rule: Sharing a Company + Last Name is NOT enough (could be siblings/spouses).
+        3. Location Conflict: Different cities usually mean different people.
+        
+        EXAMPLES (Study these "Hard Negatives")
+        
+        [EXAMPLE 1: DO NOT MERGE]
+        Entity A: {{"full_name": "Michael Chen", "company": "Google", "email": "m.chen@google.com"}}
+        Entity B: {{"full_name": "Michelle Chen", "company": "Google", "email": "michelle.c@google.com"}}
+        Decision: {{
+            "should_merge": false,
+            "confidence": 0.98,
+            "reasoning": "Same company and last name, but First Names (Michael vs Michelle) are distinctly different. Distinct emails."
+        }}
 
-        Here are examples of how to reason through matches:
-        {example_text}
+        [EXAMPLE 2: MERGE]
+        Entity A: {{"full_name": "Robert Smith", "company": "Salesforce"}}
+        Entity B: {{"full_name": "Bob Smith", "company": "Salesforce Inc"}}
+        Decision: {{
+            "should_merge": true,
+            "confidence": 0.95,
+            "reasoning": "Bob is a standard nickname for Robert. Company matches. No conflicting info."
+        }}
 
-        Now analyze these {len(pairs)} pair(s):
-
+        YOUR ANALYSIS
+        Analyze the input pairs below. Output JSON array.
+        
         {pairs_text}
-
-        Return JSON array with {len(pairs)} decision(s) in this format:
-        [{{
-            "should_merge": true or false,
-            "confidence": 0.0 to 1.0,
-            "reasoning": "step-by-step explanation",
-            "evidence_for": ["list", "of", "supporting", "signals"],
-            "evidence_against": ["list", "of", "contradicting", "signals"]
-        }}]
-
-        Think step-by-step and be precise about confidence scoring.
-        
         """
         
         return prompt
