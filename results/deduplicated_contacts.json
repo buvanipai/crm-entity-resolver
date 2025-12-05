@@ -1,0 +1,470 @@
+[
+  {
+    "canonical_id": "base_0",
+    "canonical_name": "Danielle Johnson",
+    "all_names": [
+      {
+        "value": "Danielle Johnson",
+        "field": "full_name",
+        "source": "unknown",
+        "record_id": "base_0"
+      },
+      {
+        "value": "Danielle",
+        "field": "first_name",
+        "source": "unknown",
+        "record_id": "base_0"
+      },
+      {
+        "value": "Johnson",
+        "field": "last_name",
+        "source": "unknown",
+        "record_id": "base_0"
+      },
+      {
+        "value": "D. Johnson",
+        "field": "full_name",
+        "source": "calendar",
+        "record_id": "base_0_v1"
+      },
+      {
+        "value": "Danielle Johhnson",
+        "field": "full_name",
+        "source": "manual_entry",
+        "record_id": "base_0_v2"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "danielle.johnson@sanchez-taylor.com",
+        "field": "email",
+        "source": "unknown",
+        "record_id": "base_0"
+      },
+      {
+        "value": "danielle.johhnson@sanchez-taylor.com",
+        "field": "email",
+        "source": "manual_entry",
+        "record_id": "base_0_v2"
+      }
+    ],
+    "all_phones": [
+      {
+        "value": "581-296-0013",
+        "field": "phone",
+        "source": "unknown",
+        "record_id": "base_0"
+      }
+    ],
+    "all_companies": [
+      {
+        "value": "Sanchez-Taylor",
+        "field": "company",
+        "source": "unknown",
+        "record_id": "base_0"
+      }
+    ],
+    "all_titles": [
+      {
+        "value": "Surveyor, mining",
+        "field": "title",
+        "source": "unknown",
+        "record_id": "base_0"
+      }
+    ],
+    "other_fields": {
+      "linkedin": [
+        {
+          "value": "linkedin.com/in/daniellejohnson",
+          "source": "unknown",
+          "record_id": "base_0"
+        }
+      ],
+      "location": [
+        {
+          "value": "Lake Debra, ND",
+          "source": "unknown",
+          "record_id": "base_0"
+        }
+      ]
+    },
+    "source_records": [
+      {
+        "id": "base_0",
+        "first_name": "Danielle",
+        "last_name": "Johnson",
+        "full_name": "Danielle Johnson",
+        "email": "danielle.johnson@sanchez-taylor.com",
+        "phone": "581-296-0013",
+        "company": "Sanchez-Taylor",
+        "title": "Surveyor, mining",
+        "linkedin": "linkedin.com/in/daniellejohnson",
+        "location": "Lake Debra, ND"
+      },
+      {
+        "id": "base_0_v1",
+        "full_name": "D. Johnson",
+        "title": "Surveyor, mining",
+        "company": "Sanchez-Taylor",
+        "source": "calendar"
+      },
+      {
+        "id": "base_0_v2",
+        "full_name": "Danielle Johhnson",
+        "email": "danielle.johhnson@sanchez-taylor.com",
+        "company": "Sanchez-Taylor",
+        "source": "manual_entry"
+      },
+      {
+        "id": "base_0_v3",
+        "full_name": "Danielle Johnson",
+        "phone": "581-296-0013",
+        "source": "phone_contact"
+      }
+    ],
+    "merge_timestamp": "2025-12-04T17:41:47.898383",
+    "conflicts": [
+      {
+        "field": "full_name",
+        "values": [
+          "D. Johnson",
+          "Danielle Johnson",
+          "Danielle Johhnson"
+        ]
+      },
+      {
+        "field": "email",
+        "values": [
+          "danielle.johnson@sanchez-taylor.com",
+          "danielle.johhnson@sanchez-taylor.com"
+        ]
+      }
+    ]
+  },
+  {
+    "canonical_id": "base_1",
+    "canonical_name": "Robert Cole",
+    "all_names": [
+      {
+        "value": "Robert Cole",
+        "field": "full_name",
+        "source": "unknown",
+        "record_id": "base_1"
+      },
+      {
+        "value": "Robert",
+        "field": "first_name",
+        "source": "unknown",
+        "record_id": "base_1"
+      },
+      {
+        "value": "Cole",
+        "field": "last_name",
+        "source": "unknown",
+        "record_id": "base_1"
+      },
+      {
+        "value": "Robert Coole",
+        "field": "full_name",
+        "source": "manual_entry",
+        "record_id": "base_1_v1"
+      },
+      {
+        "value": "R. Cole",
+        "field": "full_name",
+        "source": "calendar",
+        "record_id": "base_1_v2"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "robert.cole@pacheco-smith.com",
+        "field": "email",
+        "source": "unknown",
+        "record_id": "base_1"
+      },
+      {
+        "value": "robert.coole@pacheco-smith.com",
+        "field": "email",
+        "source": "manual_entry",
+        "record_id": "base_1_v1"
+      }
+    ],
+    "all_phones": [
+      {
+        "value": "(865)342-3511",
+        "field": "phone",
+        "source": "unknown",
+        "record_id": "base_1"
+      }
+    ],
+    "all_companies": [
+      {
+        "value": "Pacheco-Smith",
+        "field": "company",
+        "source": "unknown",
+        "record_id": "base_1"
+      }
+    ],
+    "all_titles": [
+      {
+        "value": "Mechanical engineer",
+        "field": "title",
+        "source": "unknown",
+        "record_id": "base_1"
+      }
+    ],
+    "other_fields": {
+      "linkedin": [
+        {
+          "value": "linkedin.com/in/robertcole",
+          "source": "unknown",
+          "record_id": "base_1"
+        }
+      ],
+      "location": [
+        {
+          "value": "Cassandraton, VA",
+          "source": "unknown",
+          "record_id": "base_1"
+        }
+      ]
+    },
+    "source_records": [
+      {
+        "id": "base_1",
+        "first_name": "Robert",
+        "last_name": "Cole",
+        "full_name": "Robert Cole",
+        "email": "robert.cole@pacheco-smith.com",
+        "phone": "(865)342-3511",
+        "company": "Pacheco-Smith",
+        "title": "Mechanical engineer",
+        "linkedin": "linkedin.com/in/robertcole",
+        "location": "Cassandraton, VA"
+      },
+      {
+        "id": "base_1_v1",
+        "full_name": "Robert Coole",
+        "email": "robert.coole@pacheco-smith.com",
+        "company": "Pacheco-Smith",
+        "source": "manual_entry"
+      },
+      {
+        "id": "base_1_v2",
+        "full_name": "R. Cole",
+        "title": "Mechanical engineer",
+        "company": "Pacheco-Smith",
+        "source": "calendar"
+      }
+    ],
+    "merge_timestamp": "2025-12-04T17:41:47.898732",
+    "conflicts": [
+      {
+        "field": "full_name",
+        "values": [
+          "R. Cole",
+          "Robert Coole",
+          "Robert Cole"
+        ]
+      },
+      {
+        "field": "email",
+        "values": [
+          "robert.coole@pacheco-smith.com",
+          "robert.cole@pacheco-smith.com"
+        ]
+      }
+    ]
+  },
+  {
+    "canonical_id": "base_2",
+    "canonical_name": "Stephen Martinez",
+    "all_names": [
+      {
+        "value": "Stephen Martinez",
+        "field": "full_name",
+        "source": "unknown",
+        "record_id": "base_2"
+      },
+      {
+        "value": "Stephen",
+        "field": "first_name",
+        "source": "unknown",
+        "record_id": "base_2"
+      },
+      {
+        "value": "Martinez",
+        "field": "last_name",
+        "source": "unknown",
+        "record_id": "base_2"
+      },
+      {
+        "value": "Stephen Martineez",
+        "field": "full_name",
+        "source": "manual_entry",
+        "record_id": "base_2_v2"
+      },
+      {
+        "value": "Stephe Martinez",
+        "field": "full_name",
+        "source": "different_person",
+        "record_id": "fp_2_0"
+      }
+    ],
+    "all_emails": [
+      {
+        "value": "stephen.martinez@miller-carter.com",
+        "field": "email",
+        "source": "unknown",
+        "record_id": "base_2"
+      },
+      {
+        "value": "stephen.martineez@miller-carter.com",
+        "field": "email",
+        "source": "manual_entry",
+        "record_id": "base_2_v2"
+      },
+      {
+        "value": "stephe.martinez@miller-carter.com",
+        "field": "email",
+        "source": "different_person",
+        "record_id": "fp_2_0"
+      }
+    ],
+    "all_phones": [
+      {
+        "value": "+1-695-993-1034x1316",
+        "field": "phone",
+        "source": "unknown",
+        "record_id": "base_2"
+      }
+    ],
+    "all_companies": [
+      {
+        "value": "Miller-Carter",
+        "field": "company",
+        "source": "unknown",
+        "record_id": "base_2"
+      }
+    ],
+    "all_titles": [
+      {
+        "value": "Medical sales representative",
+        "field": "title",
+        "source": "unknown",
+        "record_id": "base_2"
+      },
+      {
+        "value": "Geologist, engineering",
+        "field": "title",
+        "source": "different_person",
+        "record_id": "fp_2_0"
+      }
+    ],
+    "other_fields": {
+      "linkedin": [
+        {
+          "value": "linkedin.com/in/stephenmartinez",
+          "source": "unknown",
+          "record_id": "base_2"
+        }
+      ],
+      "location": [
+        {
+          "value": "West Michael, TN",
+          "source": "unknown",
+          "record_id": "base_2"
+        }
+      ]
+    },
+    "source_records": [
+      {
+        "id": "base_2",
+        "first_name": "Stephen",
+        "last_name": "Martinez",
+        "full_name": "Stephen Martinez",
+        "email": "stephen.martinez@miller-carter.com",
+        "phone": "+1-695-993-1034x1316",
+        "company": "Miller-Carter",
+        "title": "Medical sales representative",
+        "linkedin": "linkedin.com/in/stephenmartinez",
+        "location": "West Michael, TN"
+      },
+      {
+        "id": "base_2_v2",
+        "full_name": "Stephen Martineez",
+        "email": "stephen.martineez@miller-carter.com",
+        "company": "Miller-Carter",
+        "source": "manual_entry"
+      },
+      {
+        "id": "fp_2_0",
+        "full_name": "Stephe Martinez",
+        "email": "stephe.martinez@miller-carter.com",
+        "company": "Miller-Carter",
+        "title": "Geologist, engineering",
+        "source": "different_person"
+      }
+    ],
+    "merge_timestamp": "2025-12-04T17:41:47.898896",
+    "conflicts": [
+      {
+        "field": "full_name",
+        "values": [
+          "Stephen Martineez",
+          "Stephen Martinez",
+          "Stephe Martinez"
+        ]
+      },
+      {
+        "field": "email",
+        "values": [
+          "stephen.martinez@miller-carter.com",
+          "stephe.martinez@miller-carter.com",
+          "stephen.martineez@miller-carter.com"
+        ]
+      },
+      {
+        "field": "title",
+        "values": [
+          "Medical sales representative",
+          "Geologist, engineering"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "base_2_v1",
+    "full_name": "Stephen Martinez",
+    "email": "stephen92@gmail.com",
+    "source": "personal_contact"
+  },
+  {
+    "id": "fp_2_1",
+    "full_name": "Stephen Martinez",
+    "email": "stephen.martinez@zunigawongandlynch.com",
+    "company": "Ferguson and Sons",
+    "title": "Development worker, community",
+    "location": "Grayside, IN",
+    "source": "different_person"
+  },
+  {
+    "id": "base_3",
+    "first_name": "Gabrielle",
+    "last_name": "Cameron",
+    "full_name": "Gabrielle Cameron",
+    "email": "gabrielle.cameron@perezinc.com",
+    "phone": "564-613-9537x67242",
+    "company": "Perez Inc",
+    "title": "Television/film/video producer",
+    "linkedin": "linkedin.com/in/gabriellecameron",
+    "location": "Hurstfurt, MN"
+  },
+  {
+    "id": "base_3_v1",
+    "full_name": "Gabrielle Cameron",
+    "email": "gabrielle44@gmail.com",
+    "source": "personal_contact"
+  }
+]

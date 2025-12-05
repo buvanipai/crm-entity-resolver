@@ -13,6 +13,8 @@ from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from dotenv import load_dotenv
 import json
 from dataclasses import dataclass
+import time
+from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
 
 load_dotenv()
 
@@ -129,6 +131,22 @@ class EntityResolver:
                 }
             }
         ]
+    
+    @retry(
+        wait=wait_exponential(multiplier=1, min=4, max=60),
+        stop=stop_after_attempt(3),
+        retry=retry_if_exception_type(Exception)
+    )
+    def _call_llm(self, prompt: str) -> str:
+        """
+        Makes LLM call with retry logic,
+        """
+        response = self.model.generate_content(
+            prompt,
+            generation_config=genai.GenerationConfig(temperature=0.1)
+        )
+        return response.text
+        
         
     def should_merge(self, entity_a: Dict, entity_b: Dict) -> MatchDecision:
         """
@@ -137,12 +155,7 @@ class EntityResolver:
         prompt = self._build_prompt(entity_a, entity_b)
         
         try:
-            response = self.model.generate_content(
-                prompt,
-                generation_config=genai.GenerationConfig(temperature=0.1)
-            )
-            
-            content = response.text
+            content = self._call_llm(prompt)            
                         
             if "```json" in content:
                 content = content.split("```json")[1].split("```")[0]
