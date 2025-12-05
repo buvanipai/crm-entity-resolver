@@ -70,12 +70,7 @@ class Evaluator:
         self.predictions = []
         self.errors = []
         
-    def evaluate(
-        self,
-        contacts: List[Dict],
-        ground_truth: List[Dict],
-        sample_size: int = None
-        ) -> EvaluationMetrics:
+    def evaluate(self, contacts: List[Dict], ground_truth: List[Dict], sample_size: int = None) -> EvaluationMetrics:
         """
         Evaluates resolver on labeled dataset.
         """
@@ -92,11 +87,10 @@ class Evaluator:
         y_pred = []
         confidences = []
         
+        eval_pairs = []
+        eval_ground_truth = []
+        
         for i, gt in enumerate(ground_truth):
-            
-            if (i + 1) % 5 == 0:
-                print(f"Progress: {i + 1}/{len(ground_truth)} pairs evaluated.")
-            
             entity_a = contact_lookup.get(gt['entity_a_id'])
             entity_b = contact_lookup.get(gt['entity_b_id'])
             
@@ -104,23 +98,35 @@ class Evaluator:
                 print(f"Warning: Missing contact for pair {gt['entity_a_id']}, {gt['entity_b_id']}")
                 continue
             
-            decision = self.resolver.should_merge(entity_a, entity_b)
+            eval_pairs.append((entity_a, entity_b))
+            eval_ground_truth.append(gt)
             
-            y_true.append(gt['is_match'])
-            y_pred.append(decision.should_merge)
-            confidences.append(decision.confidence)
-        
-            if gt['is_match'] != decision.should_merge:
-                self.errors.append({
-                    'entity_a': entity_a,
-                    'entity_b': entity_b,
-                    'ground_truth': gt['is_match'],
-                    'prediction': decision.should_merge,
-                    'confidence': decision.confidence,
-                    'reasoning': decision.reasoning
-                })
+        batch_size = 6
+        for batch_start in range(0, len(eval_pairs), batch_size):
+            if (batch_start // batch_size + 1) % 5 == 0:
+                print(f"Progress: {batch_start}/{len(eval_pairs)} pairs evaluated.")
                 
-            time.sleep(0.1)  # To avoid rate limits
+            batch_pairs = eval_pairs[batch_start:batch_start + batch_size]
+            batch_gt = eval_ground_truth[batch_start:batch_start + batch_size]
+            
+            decisions = self.resolver.should_merge(pairs=batch_pairs)
+            if not isinstance(decisions, list):
+                decisions = [decisions]
+                
+            for decision, gt in zip(decisions, batch_gt):
+                y_true.append(gt['is_match'])
+                y_pred.append(decision.should_merge)
+                confidences.append(decision.confidence)
+        
+                if gt['is_match'] != decision.should_merge:
+                    self.errors.append({
+                        'entity_a': entity_a,
+                        'entity_b': entity_b,
+                        'ground_truth': gt['is_match'],
+                        'prediction': decision.should_merge,
+                        'confidence': decision.confidence,
+                        'reasoning': decision.reasoning
+                    })
             
         precision = precision_score(y_true, y_pred)
         recall = recall_score(y_true, y_pred)

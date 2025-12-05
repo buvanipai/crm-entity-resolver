@@ -34,14 +34,30 @@ class EntityResolutionPipeline:
         print(f"Total comparisons needed: {n * (n - 1) // 2}")
         
         compared = 0
+        batch_size = 6
+        pairs_to_compare = []
+        pair_contacts = []
+        
         for i in range(n):
             for j in range(i + 1, n):
+                pairs_to_compare.append((contacts[i], contacts[j]))
+                pair_contacts.append((i, j))
+        
+        for batch_start in range(0, len(pairs_to_compare), batch_size):
+            batch_pairs = pairs_to_compare[batch_start:batch_start + batch_size]
+            batch_indices = pair_contacts[batch_start:batch_start + batch_size]
+            
+            decisions = self.resolver.should_merge(pairs=batch_pairs)
+            
+            if not isinstance(decisions, list):
+                decisions = [decisions]
+                
+            for decision, (i, j) in zip(decisions, batch_indices):
                 compared += 1
+                
                 if compared % 50 == 0:
                     print(f"Progress: {compared} comparisons done.")
-                
-                decision = self.resolver.should_merge(contacts[i], contacts[j])
-                
+                    
                 if compared <= 3:
                     print(f"Comparison {compared}:")
                     print(f"Contact A: {contacts[i]}")

@@ -122,21 +122,21 @@
         "source": "phone_contact"
       }
     ],
-    "merge_timestamp": "2025-12-04T17:41:47.898383",
+    "merge_timestamp": "2025-12-04T19:27:17.999614",
     "conflicts": [
       {
         "field": "full_name",
         "values": [
-          "D. Johnson",
           "Danielle Johnson",
-          "Danielle Johhnson"
+          "Danielle Johhnson",
+          "D. Johnson"
         ]
       },
       {
         "field": "email",
         "values": [
-          "danielle.johnson@sanchez-taylor.com",
-          "danielle.johhnson@sanchez-taylor.com"
+          "danielle.johhnson@sanchez-taylor.com",
+          "danielle.johnson@sanchez-taylor.com"
         ]
       }
     ]
@@ -258,14 +258,14 @@
         "source": "calendar"
       }
     ],
-    "merge_timestamp": "2025-12-04T17:41:47.898732",
+    "merge_timestamp": "2025-12-04T19:27:18.000214",
     "conflicts": [
       {
         "field": "full_name",
         "values": [
+          "Robert Cole",
           "R. Cole",
-          "Robert Coole",
-          "Robert Cole"
+          "Robert Coole"
         ]
       },
       {
@@ -318,6 +318,12 @@
         "field": "email",
         "source": "unknown",
         "record_id": "base_2"
+      },
+      {
+        "value": "stephen92@gmail.com",
+        "field": "email",
+        "source": "personal_contact",
+        "record_id": "base_2_v1"
       },
       {
         "value": "stephen.martineez@miller-carter.com",
@@ -392,6 +398,12 @@
         "location": "West Michael, TN"
       },
       {
+        "id": "base_2_v1",
+        "full_name": "Stephen Martinez",
+        "email": "stephen92@gmail.com",
+        "source": "personal_contact"
+      },
+      {
         "id": "base_2_v2",
         "full_name": "Stephen Martineez",
         "email": "stephen.martineez@miller-carter.com",
@@ -407,22 +419,23 @@
         "source": "different_person"
       }
     ],
-    "merge_timestamp": "2025-12-04T17:41:47.898896",
+    "merge_timestamp": "2025-12-04T19:27:18.000527",
     "conflicts": [
       {
         "field": "full_name",
         "values": [
-          "Stephen Martineez",
           "Stephen Martinez",
-          "Stephe Martinez"
+          "Stephe Martinez",
+          "Stephen Martineez"
         ]
       },
       {
         "field": "email",
         "values": [
           "stephen.martinez@miller-carter.com",
+          "stephen.martineez@miller-carter.com",
           "stephe.martinez@miller-carter.com",
-          "stephen.martineez@miller-carter.com"
+          "stephen92@gmail.com"
         ]
       },
       {
@@ -433,12 +446,6 @@
         ]
       }
     ]
-  },
-  {
-    "id": "base_2_v1",
-    "full_name": "Stephen Martinez",
-    "email": "stephen92@gmail.com",
-    "source": "personal_contact"
   },
   {
     "id": "fp_2_1",

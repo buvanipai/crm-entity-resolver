@@ -7,7 +7,7 @@ rule-based systems struggle with.
 """
 
 import os
-from typing import Dict, List, Optional
+from typing import Dict, List, Tuple
 import google.generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from dotenv import load_dotenv
@@ -148,11 +148,16 @@ class EntityResolver:
         return response.text
         
         
-    def should_merge(self, entity_a: Dict, entity_b: Dict) -> MatchDecision:
+    def should_merge(self, entity_a: Dict = None, entity_b: Dict = None, pairs: List[Tuple[Dict, Dict]] = None) -> MatchDecision:
         """
         Determine if two entities should be merged.
         """
-        prompt = self._build_prompt(entity_a, entity_b)
+        if pairs is None:
+            pairs = [(entity_a, entity_b)]
+            
+        prompt = self._build_prompt(pairs)
+        
+        # print(f"\n=== DEBUG: Last 1000 chars of prompt ===\n{prompt[-1000:]}\n=== END DEBUG ===\n")
         
         try:
             content = self._call_llm(prompt)            
@@ -164,25 +169,28 @@ class EntityResolver:
                 
             result = json.loads(content.strip())
             
-            return MatchDecision(
-                should_merge=result["should_merge"],
-                confidence=result["confidence"],
-                reasoning=result["reasoning"],
-                evidence_for=result.get("evidence_for", []),
-                evidence_against=result.get("evidence_against",[])
-            )
+            if not isinstance(result, list):
+                result = [result]
+                
+            decisions = [
+                MatchDecision(
+                    should_merge=r["should_merge"],
+                    confidence=r["confidence"],
+                    reasoning=r["reasoning"],
+                    evidence_for=r.get("evidence_for", []),
+                    evidence_against=r.get("evidence_against",[])
+                )
+                for r in result
+            ]
+            
+            return decisions[0] if len(decisions) == 1 else decisions
             
         except Exception as e:
             
-            return MatchDecision(
-                should_merge=False,
-                confidence=0.0,
-                reasoning=f"Error during LLM processing: {str(e)}",
-                evidence_for=[],
-                evidence_against=["API call failed"]
-            )
+            error = MatchDecision(False, 0.0, f"Error: {str(e)}", [], [])
+            return error if len(pairs) == 1 else [error] * len(pairs)
             
-    def _build_prompt(self, entity_a: Dict, entity_b: Dict) -> str:
+    def _build_prompt(self, pairs: List[Tuple[Dict, Dict]]) -> str:
         """
         Constructs the few-shot prompt for entity matching.
         """
@@ -194,7 +202,11 @@ class EntityResolver:
             example_text += f"Entity A: {json.dumps(example['entity_a'], indent=2)}\n"
             example_text += f"Entity B: {json.dumps(example['entity_b'], indent=2)}\n"
             example_text += f"Decision: {json.dumps(example['decision'], indent=2)}\n"
-            
+        
+        pairs_text = ""
+        for i, (a, b) in enumerate(pairs):
+            pairs_text += f"Pair {i+1}:\nEntity A:\n{json.dumps(a, indent=2)}\nEntity B:\n{json.dumps(b, indent=2)}\n"
+        
         prompt = f"""
         
         You are an expert at entity resolution for CRM systems. Your task is to determine if two contact records represent the same person.
@@ -210,22 +222,18 @@ class EntityResolver:
         Here are examples of how to reason through matches:
         {example_text}
 
-        Now analyze these two entities:
+        Now analyze these {len(pairs)} pair(s):
 
-        Entity A:
-        {json.dumps(entity_a, indent=2)}
+        {pairs_text}
 
-        Entity B:
-        {json.dumps(entity_b, indent=2)}
-
-        Provide your analysis in this exact JSON format:
-        {{
+        Return JSON array with {len(pairs)} decision(s) in this format:
+        [{{
             "should_merge": true or false,
             "confidence": 0.0 to 1.0,
             "reasoning": "step-by-step explanation",
             "evidence_for": ["list", "of", "supporting", "signals"],
             "evidence_against": ["list", "of", "contradicting", "signals"]
-        }}
+        }}]
 
         Think step-by-step and be precise about confidence scoring.
         

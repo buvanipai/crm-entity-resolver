@@ -1,8 +1,8 @@
 {
   "original_count": 14,
-  "duplicate_pairs_found": 11,
+  "duplicate_pairs_found": 15,
   "merge_groups": 3,
-  "final_count": 7,
-  "reduction": 7,
-  "processing_time": "0:02:44.409745"
+  "final_count": 6,
+  "reduction": 8,
+  "processing_time": "0:01:05.352826"
 }
