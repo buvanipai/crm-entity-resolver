@@ -4,9 +4,11 @@ import json
 import os
 import networkx as nx
 import matplotlib.pyplot as plt
+import sys
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 
-from src.pipeline import EntityResolutionPipeline
+from pipeline import EntityResolutionPipeline
 
 st.set_page_config(page_title="CRM Entity Resolver", page_icon="🔗", layout="wide")
 
