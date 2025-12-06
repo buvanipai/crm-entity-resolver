@@ -1,6 +1,7 @@
 # AI-Powered CRM Entity Resolver
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://crm-entity-resolver.streamlit.app/)
 ![AI](https://img.shields.io/badge/AI-Gemini%202.0%20Flash--Lite-orange)
 ![Precision](https://img.shields.io/badge/Precision-100%25-green)
 ![F1 Score](https://img.shields.io/badge/F1-96%25-green)
